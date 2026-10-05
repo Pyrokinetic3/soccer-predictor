@@ -1,0 +1,10 @@
+# Python environment
+.venv/
+
+# Generated Python and notebook files
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Local secrets
+.env
