@@ -136,11 +136,11 @@ A dependency file with tested package versions will be added as the project deve
 - [x] Load three seasons of Premier League match records.
 - [x] Standardize score formats and extract goal totals.
 - [x] Implement expected-result and Elo-update functions.
-- [ ] Generate historical pre-match Elo ratings and team rankings.
-- [ ] Add data validation and checks for rating calculations.
-- [ ] Build features using only previously available information.
-- [ ] Establish chronological evaluation and baseline models.
-- [ ] Train and evaluate XGBoost.
+- [x] Generate historical pre-match Elo ratings and team rankings.
+- [x] Add data validation and checks for rating calculations.
+- [x] Build features using only previously available information.
+- [x] Establish chronological evaluation and baseline models.
+- [x] Train and evaluate XGBoost.
 - [ ] Implement and evaluate season simulations.
 - [ ] Build and deploy an interactive dashboard.
 - [ ] Explore expansion to other domestic leagues and the Champions League.
