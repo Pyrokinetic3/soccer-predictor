@@ -151,3 +151,82 @@ def build_features(matches, k=40, home_advantage=50):
     matches["result"] = results
 
     return matches
+
+
+def build_team_state(matches, prediction_date, k=40, home_advantage=50):
+    # Only use results from dates before the fixture being predicted.
+    earlier_matches = matches.loc[
+        matches["date"] < pd.Timestamp(prediction_date)
+    ].sort_values("date", kind="stable")
+
+    if earlier_matches[["home_goals", "away_goals"]].isna().any().any():
+        raise ValueError("Team history must contain completed matches.")
+
+    teams = pd.concat([
+        earlier_matches["team1"],
+        earlier_matches["team2"]
+    ]).unique()
+
+    state = {
+        team: {
+            "rating": 1500.0,
+            "points": [],
+            "scored": [],
+            "conceded": []
+        }
+        for team in teams
+    }
+
+    for match in earlier_matches.itertuples(index=False):
+        home = state[match.team1]
+        away = state[match.team2]
+
+        home["rating"], away["rating"] = update_ratings(
+            home["rating"],
+            away["rating"],
+            match.home_goals,
+            match.away_goals,
+            k=k,
+            home_advantage=home_advantage
+        )
+
+        home_points, away_points = points_won(
+            match.home_goals, match.away_goals
+        )
+
+        home["points"].append(home_points)
+        away["points"].append(away_points)
+
+        home["scored"].append(match.home_goals)
+        home["conceded"].append(match.away_goals)
+
+        away["scored"].append(match.away_goals)
+        away["conceded"].append(match.home_goals)
+
+    return state
+
+
+def make_fixture_features(state, home_team, away_team):
+    if home_team == away_team:
+        raise ValueError("Choose two different teams.")
+
+    for team in [home_team, away_team]:
+        if team not in state:
+            raise ValueError(f"No match history found for {team}.")
+
+    home = state[home_team]
+    away = state[away_team]
+
+    features = {
+        "home_elo_before": home["rating"],
+        "away_elo_before": away["rating"],
+        "elo_difference": home["rating"] - away["rating"],
+        "home_form_5": recent_average(home["points"]),
+        "away_form_5": recent_average(away["points"]),
+        "home_goals_scored_5": recent_average(home["scored"]),
+        "home_goals_conceded_5": recent_average(home["conceded"]),
+        "away_goals_scored_5": recent_average(away["scored"]),
+        "away_goals_conceded_5": recent_average(away["conceded"])
+    }
+
+    return pd.DataFrame([features], columns=INPUT_COLUMNS)

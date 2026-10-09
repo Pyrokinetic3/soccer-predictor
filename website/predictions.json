@@ -1,0 +1,107 @@
+{
+  "generated_at": "2026-10-09T04:02:26.526776+00:00",
+  "history_through": "2026-09-20",
+  "round": "Matchday 6",
+  "fixtures": [
+    {
+      "date": "2026-10-10",
+      "home_team": "Arsenal FC",
+      "away_team": "Leeds United FC",
+      "probabilities": {
+        "home_win": 0.638642938511521,
+        "draw": 0.21168554315551127,
+        "away_win": 0.1496715183329678
+      }
+    },
+    {
+      "date": "2026-10-10",
+      "home_team": "Sunderland AFC",
+      "away_team": "Brighton & Hove Albion FC",
+      "probabilities": {
+        "home_win": 0.2940395951082957,
+        "draw": 0.30360692856031274,
+        "away_win": 0.4023534763313917
+      }
+    },
+    {
+      "date": "2026-10-10",
+      "home_team": "Chelsea FC",
+      "away_team": "AFC Bournemouth",
+      "probabilities": {
+        "home_win": 0.3337261596429402,
+        "draw": 0.2684456620863194,
+        "away_win": 0.39782817827074035
+      }
+    },
+    {
+      "date": "2026-10-10",
+      "home_team": "Ipswich Town FC",
+      "away_team": "Fulham FC",
+      "probabilities": {
+        "home_win": 0.20259075184395284,
+        "draw": 0.32541372696694515,
+        "away_win": 0.47199552118910193
+      }
+    },
+    {
+      "date": "2026-10-10",
+      "home_team": "Aston Villa FC",
+      "away_team": "Brentford FC",
+      "probabilities": {
+        "home_win": 0.3722756635485489,
+        "draw": 0.2645659881717255,
+        "away_win": 0.3631583482797256
+      }
+    },
+    {
+      "date": "2026-10-10",
+      "home_team": "Manchester United FC",
+      "away_team": "Tottenham Hotspur FC",
+      "probabilities": {
+        "home_win": 0.6249496559040095,
+        "draw": 0.220196378205523,
+        "away_win": 0.1548539658904676
+      }
+    },
+    {
+      "date": "2026-10-11",
+      "home_team": "Hull City AFC",
+      "away_team": "Everton FC",
+      "probabilities": {
+        "home_win": 0.3811714688101479,
+        "draw": 0.31109842673134375,
+        "away_win": 0.30773010445850835
+      }
+    },
+    {
+      "date": "2026-10-11",
+      "home_team": "Crystal Palace FC",
+      "away_team": "Nottingham Forest FC",
+      "probabilities": {
+        "home_win": 0.3325237413189089,
+        "draw": 0.2678422021457597,
+        "away_win": 0.39963405653533146
+      }
+    },
+    {
+      "date": "2026-10-11",
+      "home_team": "Liverpool FC",
+      "away_team": "Manchester City FC",
+      "probabilities": {
+        "home_win": 0.35592205015228645,
+        "draw": 0.2901057573984985,
+        "away_win": 0.353972192449215
+      }
+    },
+    {
+      "date": "2026-10-12",
+      "home_team": "Coventry City FC",
+      "away_team": "Newcastle United FC",
+      "probabilities": {
+        "home_win": 0.3476955232952594,
+        "draw": 0.26724998048941623,
+        "away_win": 0.3850544962153245
+      }
+    }
+  ]
+}
