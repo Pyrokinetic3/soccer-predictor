@@ -983,3 +983,18 @@ footer a {
     height: 440px;
   }
 }
+.team-badge img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+.team-badge {
+  overflow: hidden;
+}
+
+.team-badge img {
+  display: block;
+  width: 75%;
+  height: 75%;
+  object-fit: contain;
+}

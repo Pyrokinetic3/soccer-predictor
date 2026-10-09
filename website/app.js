@@ -1,4 +1,37 @@
 /* Static site: Python produces the data; this file displays it. */
+const teamLogos = {
+  "AFC Bournemouth": "assets/logos/bournemouth.png",
+  "Arsenal FC": "assets/logos/arsenal.png",
+  "Aston Villa FC": "assets/logos/aston-villa.png",
+  "Brentford FC": "assets/logos/brentford.png",
+  "Brighton & Hove Albion FC": "assets/logos/brighton.png",
+  "Chelsea FC": "assets/logos/chelsea.png",
+  "Coventry City FC": "assets/logos/coventry.png",
+  "Crystal Palace FC": "assets/logos/crystal-palace.png",
+  "Everton FC": "assets/logos/everton.png",
+  "Fulham FC": "assets/logos/fulham.png",
+  "Hull City AFC": "assets/logos/hull.png",
+  "Ipswich Town FC": "assets/logos/ipswich.png",
+  "Leeds United FC": "assets/logos/leeds.png",
+  "Liverpool FC": "assets/logos/liverpool.png",
+  "Manchester City FC": "assets/logos/manchester-city.png",
+  "Manchester United FC": "assets/logos/manchester-united.png",
+  "Newcastle United FC": "assets/logos/newcastle.png",
+  "Nottingham Forest FC": "assets/logos/nottingham-forest.png",
+  "Sunderland AFC": "assets/logos/sunderland.png",
+  "Tottenham Hotspur FC": "assets/logos/tottenham.png",
+};
+
+function teamBadge(name) {
+  const logo = teamLogos[name];
+
+  if (!logo) {
+    return escapeHTML(initials(name));
+  }
+
+  return `<img src="${logo}" alt="" loading="lazy">`;
+}
+
 const $ = (id) => document.getElementById(id);
 const escapeHTML = (value) =>
   String(value).replace(
@@ -96,7 +129,7 @@ function fixtureCard(fixture, index) {
   );
   card.innerHTML = `<div class="card-inner">
     <div class="card-face card-front"><div class="card-meta"><time datetime="${escapeHTML(fixture.date)}">${dateLabel(fixture.date)}</time><span class="card-index">MATCH ${String(index + 1).padStart(2, "0")}</span></div>
-      <div class="teams"><div class="team"><span class="team-badge" aria-hidden="true">${escapeHTML(initials(fixture.home_team))}</span><span class="team-name">${h}</span><span class="venue-label">Home</span></div><span class="versus">vs</span><div class="team"><span class="team-badge" aria-hidden="true">${escapeHTML(initials(fixture.away_team))}</span><span class="team-name">${a}</span><span class="venue-label">Away</span></div></div>
+      <div class="teams"><div class="team"><span class="team-badge" aria-hidden="true">${teamBadge(fixture.home_team)}</span><span class="team-name">${h}</span><span class="venue-label">Home</span></div><span class="versus">vs</span><div class="team"><span class="team-badge" aria-hidden="true">${teamBadge(fixture.away_team)}</span><span class="team-name">${a}</span><span class="venue-label">Away</span></div></div>
       <div class="probability-bar" aria-hidden="true">${p.map((v) => `<span style="width:${v * 100}%"></span>`).join("")}</div>
       <div class="probability-labels">${p.map((v, i) => `<div><strong>${percent(v)}</strong><span>${["Home win", "Draw", "Away win"][i]}</span></div>`).join("")}</div>
       <button class="flip-button" aria-expanded="false" aria-controls="stats-${index}" aria-label="View stats for ${h} versus ${a}">Behind the prediction <b aria-hidden="true">↗</b></button>
