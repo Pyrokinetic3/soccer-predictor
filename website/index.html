@@ -1,33 +1,213 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Premier League Predictor</title>
-</head>
-<body>
-  <h1>Premier League Predictor</h1>
-  <p>By Aren Khachikian · In development</p>
-
-  <p>
-    A machine learning project using historical Premier League
-    results, pre-match Elo ratings, and XGBoost to predict
-    home wins, draws, and away wins.
-  </p>
-
-  <h2>Progress so far</h2>
-  <ul>
-    <li>Loaded and cleaned three seasons of match results.</li>
-    <li>Calculated chronological pre-match Elo ratings.</li>
-    <li>Tuned XGBoost using chronological cross-validation.</li>
-    <li>Achieved validation log loss of 1.0321,
-        compared with a historical-frequency baseline of 1.0828.</li>
-  </ul>
-
-  <p>Interactive predictions and league simulations are planned.</p>
-
-  <a href="https://github.com/Pyrokinetic3/soccer-predictor">
-    View the project on GitHub
-  </a>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#faf9f6" />
+    <meta
+      name="description"
+      content="A lifelong football fan meets machine learning. Explore Aren Khachikian’s Premier League predictions, prematch stats, and prediction track record."
+    />
+    <title>Premier League Predictor · Aren Khachikian</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#fixtures">Skip to predictions</a>
+    <div class="rainbow-rule"></div>
+    <header class="site-header wrap">
+      <a class="brand" href="#" aria-label="Premier League Predictor home"
+        ><span class="brand-icon" aria-hidden="true">✳</span> THE FOOTBALL
+        EXPERIMENT</a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#fixtures">Predictions</a><a href="#history">Track record</a
+        ><a
+          href="https://github.com/Pyrokinetic3/soccer-predictor"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub ↗</a
+        >
+      </nav>
+    </header>
+    <main>
+      <section class="hero wrap" aria-labelledby="title">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="tiny-ball" aria-hidden="true">✳</span> A LITTLE
+            FOOTBALL. A LITTLE MACHINE LEARNING.
+          </p>
+          <h1 id="title">
+            Premier League.<br /><span class="gradient-text"
+              >Meet probability.</span
+            >
+          </h1>
+          <p class="byline">
+            A project by <strong>Aren Khachikian.</strong
+            ><br class="mobile-break" />
+            Football fan. Python person. Occasionally right.
+          </p>
+          <p class="intro">
+            I’ve been a soccer fan for as long as I can remember. When I started
+            learning machine learning, I had a question: could I turn all that
+            match-watching into something a little more scientific? This is
+            where my favorite pastime meets my newest obsession.
+          </p>
+          <a class="primary-link" href="#fixtures"
+            >See what the model thinks <span aria-hidden="true">↘</span></a
+          >
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="art-label">FOOTBALL, WITH A LITTLE MATH.</div>
+          <svg class="football" viewBox="0 0 240 240" fill="none">
+            <defs>
+              <radialGradient id="ball">
+                <stop stop-color="#fff" />
+                <stop offset="1" stop-color="#e5e1f4" />
+              </radialGradient>
+            </defs>
+            <circle
+              cx="120"
+              cy="120"
+              r="98"
+              fill="url(#ball)"
+              stroke="#282536"
+              stroke-width="2"
+            />
+            <path d="m120 76 42 30-16 49H94l-16-49Z" fill="#282536" />
+            <path
+              d="m120 76-5-48m47 78 44-16m-60 65 29 38m-81-38-30 38m14-87L35 88"
+              stroke="#282536"
+              stroke-width="3"
+            />
+            <path
+              d="m88 28 27 0 31-3 19 19-7 16-51-10-20-13Zm111 36 17 34-7 35-16-3-7-36Zm-21 115 12 7-27 24-31 7-3-18Zm-87 22-6 14-35-23-11-29 18-4Zm-65-85-4-22 14-36 18-8 9 14-24 48Z"
+              fill="#282536"
+            />
+          </svg>
+          <div class="art-chip chip-one">
+            <span class="dot violet"></span> Form meets forecast
+          </div>
+          <div class="art-chip chip-two">
+            <span class="dot orange"></span> Expect the unexpected
+          </div>
+          <span class="spark spark-one">✦</span
+          ><span class="spark spark-two">✳</span>
+        </div>
+      </section>
+      <section class="about-strip wrap" aria-label="About the model">
+        <div>
+          <span class="section-number">01 / THE IDEA</span>
+          <h2>Less gut feeling.<br />More game data.</h2>
+        </div>
+        <p>
+          Five seasons of results, prematch Elo ratings, and recent form go into
+          a calibrated logistic regression model. Out come three probabilities:
+          home win, draw, and away win. No crystal ball. Just an experiment
+          worth following.
+        </p>
+        <div class="mini-facts">
+          <div><strong>1,900</strong><span>historical matches</span></div>
+          <div><strong>9</strong><span>prematch features</span></div>
+        </div>
+      </section>
+      <section
+        id="fixtures"
+        class="fixtures-section wrap"
+        aria-labelledby="fixtures-title"
+      >
+        <div class="section-top">
+          <div>
+            <p class="eyebrow">02 / BEFORE THE WHISTLE</p>
+            <h2 id="fixtures-title">The next ten.</h2>
+            <p class="section-description">
+              Pick a match. Flip the card. Get the numbers.
+            </p>
+          </div>
+          <span id="round-label" class="pill">Upcoming fixtures</span>
+        </div>
+        <div class="fixture-toolbar">
+          <p id="data-status" role="status">
+            Loading the latest prediction snapshot…
+          </p>
+          <span class="legend"
+            ><i class="dot violet"></i> Home <i class="dot amber"></i> Draw
+            <i class="dot teal"></i> Away</span
+          >
+        </div>
+        <div id="fixtures-grid" class="fixtures-grid" aria-live="polite"></div>
+        <p class="data-note" id="data-note">
+          These are model estimates, not guarantees. Predictions use the
+          available completed results.
+        </p>
+      </section>
+      <section
+        id="history"
+        class="history-section wrap"
+        aria-labelledby="history-title"
+      >
+        <div class="section-top">
+          <div>
+            <p class="eyebrow">03 / AFTER THE WHISTLE</p>
+            <h2 id="history-title">
+              Keeping score.<br /><span class="muted-heading"
+                >Even when I’m wrong.</span
+              >
+            </h2>
+          </div>
+          <span id="history-count" class="pill">0 / 30 results</span>
+        </div>
+        <p class="section-description history-intro">
+          The latest 30 completed matches with a prediction recorded before
+          kickoff. The picks stay put. The results speak for themselves.
+        </p>
+        <div id="history-content" aria-live="polite">
+          <p class="loading-message">Loading prediction history…</p>
+        </div>
+        <details class="evaluation-details">
+          <summary>
+            How did the model do before launch?
+            <span aria-hidden="true">+</span>
+          </summary>
+          <div class="evaluation-body">
+            <p>
+              In a historical evaluation of 50 held-out 2026/27 matches, the
+              model picked 23 results correctly (46%), compared with 18 (36%)
+              for a historical-frequency baseline. Its log loss was 1.030 versus
+              1.117 for that baseline. Lower log loss means better probability
+              predictions.
+            </p>
+            <p>
+              This is a small initial sample, separate from the public
+              prediction history above. It does not guarantee future
+              performance.
+            </p>
+          </div>
+        </details>
+      </section>
+      <section class="closing wrap">
+        <span class="closing-star" aria-hidden="true">✳</span>
+        <h2>Beautiful game.<br />Imperfect predictions.</h2>
+        <p>Built to learn. Shared for the love of football.</p>
+        <a
+          href="https://github.com/Pyrokinetic3/soccer-predictor"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Explore the project on GitHub ↗</a
+        >
+      </section>
+    </main>
+    <footer class="wrap">
+      <span>Made with curiosity by <strong>Aren Khachikian</strong></span
+      ><span>Independent project · Data from OpenFootball</span
+      ><a href="#">Back to top ↑</a>
+    </footer>
+    <noscript
+      ><p class="wrap">
+        Please enable JavaScript to load the fixture predictions and history.
+      </p></noscript
+    >
+  </body>
 </html>

@@ -11,6 +11,17 @@
         "home_win": 0.638642938511521,
         "draw": 0.21168554315551127,
         "away_win": 0.1496715183329678
+      },
+      "features": {
+        "home_elo_before": 1779.314708021517,
+        "away_elo_before": 1585.9482903155483,
+        "elo_difference": 193.36641770596862,
+        "home_form_5": 2.4,
+        "away_form_5": 1.8,
+        "home_goals_scored_5": 1.6,
+        "home_goals_conceded_5": 0.8,
+        "away_goals_scored_5": 1.4,
+        "away_goals_conceded_5": 0.6
       }
     },
     {
@@ -21,6 +32,17 @@
         "home_win": 0.2940395951082957,
         "draw": 0.30360692856031274,
         "away_win": 0.4023534763313917
+      },
+      "features": {
+        "home_elo_before": 1543.0007038073359,
+        "away_elo_before": 1613.9804761365563,
+        "elo_difference": -70.9797723292204,
+        "home_form_5": 0.8,
+        "away_form_5": 2.0,
+        "home_goals_scored_5": 1.2,
+        "home_goals_conceded_5": 2.0,
+        "away_goals_scored_5": 3.2,
+        "away_goals_conceded_5": 1.0
       }
     },
     {
@@ -31,6 +53,17 @@
         "home_win": 0.3337261596429402,
         "draw": 0.2684456620863194,
         "away_win": 0.39782817827074035
+      },
+      "features": {
+        "home_elo_before": 1548.8273571974082,
+        "away_elo_before": 1604.4754893025981,
+        "elo_difference": -55.648132105189916,
+        "home_form_5": 1.4,
+        "away_form_5": 0.6,
+        "home_goals_scored_5": 2.0,
+        "home_goals_conceded_5": 2.4,
+        "away_goals_scored_5": 1.2,
+        "away_goals_conceded_5": 1.6
       }
     },
     {
@@ -41,6 +74,17 @@
         "home_win": 0.20259075184395284,
         "draw": 0.32541372696694515,
         "away_win": 0.47199552118910193
+      },
+      "features": {
+        "home_elo_before": 1375.6648044965575,
+        "away_elo_before": 1502.5584315914894,
+        "elo_difference": -126.89362709493184,
+        "home_form_5": 1.2,
+        "away_form_5": 0.4,
+        "home_goals_scored_5": 1.4,
+        "home_goals_conceded_5": 2.2,
+        "away_goals_scored_5": 1.0,
+        "away_goals_conceded_5": 1.6
       }
     },
     {
@@ -51,6 +95,17 @@
         "home_win": 0.3722756635485489,
         "draw": 0.2645659881717255,
         "away_win": 0.3631583482797256
+      },
+      "features": {
+        "home_elo_before": 1579.8439577684337,
+        "away_elo_before": 1606.239182766286,
+        "elo_difference": -26.39522499785221,
+        "home_form_5": 0.8,
+        "away_form_5": 1.8,
+        "home_goals_scored_5": 0.8,
+        "home_goals_conceded_5": 1.8,
+        "away_goals_scored_5": 2.0,
+        "away_goals_conceded_5": 0.8
       }
     },
     {
@@ -61,6 +116,17 @@
         "home_win": 0.6249496559040095,
         "draw": 0.220196378205523,
         "away_win": 0.1548539658904676
+      },
+      "features": {
+        "home_elo_before": 1646.611235268497,
+        "away_elo_before": 1435.8819266490225,
+        "elo_difference": 210.72930861947452,
+        "home_form_5": 1.0,
+        "away_form_5": 0.4,
+        "home_goals_scored_5": 1.6,
+        "home_goals_conceded_5": 1.6,
+        "away_goals_scored_5": 0.4,
+        "away_goals_conceded_5": 1.6
       }
     },
     {
@@ -71,6 +137,17 @@
         "home_win": 0.3811714688101479,
         "draw": 0.31109842673134375,
         "away_win": 0.30773010445850835
+      },
+      "features": {
+        "home_elo_before": 1534.747782871877,
+        "away_elo_before": 1556.5243815015606,
+        "elo_difference": -21.776598629683576,
+        "home_form_5": 1.6,
+        "away_form_5": 1.8,
+        "home_goals_scored_5": 1.2,
+        "home_goals_conceded_5": 0.8,
+        "away_goals_scored_5": 1.2,
+        "away_goals_conceded_5": 0.6
       }
     },
     {
@@ -81,6 +158,17 @@
         "home_win": 0.3325237413189089,
         "draw": 0.2678422021457597,
         "away_win": 0.39963405653533146
+      },
+      "features": {
+        "home_elo_before": 1488.330136503115,
+        "away_elo_before": 1529.8801542047745,
+        "elo_difference": -41.5500177016595,
+        "home_form_5": 0.8,
+        "away_form_5": 1.0,
+        "home_goals_scored_5": 1.2,
+        "home_goals_conceded_5": 2.2,
+        "away_goals_scored_5": 0.8,
+        "away_goals_conceded_5": 1.0
       }
     },
     {
@@ -91,6 +179,17 @@
         "home_win": 0.35592205015228645,
         "draw": 0.2901057573984985,
         "away_win": 0.353972192449215
+      },
+      "features": {
+        "home_elo_before": 1620.0494421550068,
+        "away_elo_before": 1787.6140514237325,
+        "elo_difference": -167.5646092687257,
+        "home_form_5": 1.8,
+        "away_form_5": 3.0,
+        "home_goals_scored_5": 1.4,
+        "home_goals_conceded_5": 0.8,
+        "away_goals_scored_5": 2.6,
+        "away_goals_conceded_5": 1.0
       }
     },
     {
@@ -101,6 +200,17 @@
         "home_win": 0.3476955232952594,
         "draw": 0.26724998048941623,
         "away_win": 0.3850544962153245
+      },
+      "features": {
+        "home_elo_before": 1479.8382645055174,
+        "away_elo_before": 1561.4427506409831,
+        "elo_difference": -81.60448613546578,
+        "home_form_5": 0.6,
+        "away_form_5": 1.6,
+        "home_goals_scored_5": 0.2,
+        "home_goals_conceded_5": 2.0,
+        "away_goals_scored_5": 1.8,
+        "away_goals_conceded_5": 1.8
       }
     }
   ]
