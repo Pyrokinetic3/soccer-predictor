@@ -1,150 +1,255 @@
 # Premier League Predictor
 
-A Python project exploring how historical match results can be used to estimate team strength, predict Premier League match outcomes, and simulate the title race throughout a season.
+**Football predictions, built from match history.**
 
-The project starts with an Elo rating system and data preparation, with plans to build an XGBoost classifier and an interactive web application. Development takes place in a Jupyter notebook in VS Code.
+I’m Aren Khachikian, a lifelong soccer fan learning machine learning. I built this project to combine the two: estimate team strength, turn historical results into match probabilities, and track how those predictions compare with what actually happens.
 
-**Status: In development.** Data loading, score-format cleaning, and basic Elo functions are implemented. Historical Elo processing, machine learning, season simulations, and the website are planned. No predictive performance results have been established yet.
+The project uses five seasons of Premier League results, nine prematch features, chronological validation, and probability calibration. It compares a historical-frequency baseline, logistic regression, and XGBoost. **Calibrated logistic regression powers the current predictions.**
 
-## Goals
+The website displays ten upcoming fixtures, animated cards with prematch statistics, and home-win, draw, and away-win probabilities. Its public results-history interface is built; automatic data updates and prediction archiving are still planned.
 
-- Estimate team strength using ratings updated after each match.
-- Predict probabilities of a home win, draw, or away win using information available before kickoff.
-- Compare XGBoost with simpler baseline models.
-- Simulate remaining fixtures to estimate each team's chance of winning the league.
-- Present ratings, predictions, and title probabilities through an interactive dashboard.
+## Results
 
-## Data
+### Later-season evaluation
 
-The initial dataset contains **1,140 Premier League match records** across three seasons:
+The evaluation notebook tests the models on the **first 50 completed matches in the local 2026/27 dataset**, after fitting on data from 2021/22–2025/26.
 
-| Season | Matches |
+| Model | Test log loss ↓ | Test accuracy ↑ |
+| --- | ---: | ---: |
+| **Calibrated logistic regression** | **1.029980** | **46% — 23/50** |
+| Logistic regression, full historical training set | 1.043127 | — |
+| Tuned XGBoost | 1.065769 | — |
+| Historical-frequency baseline | 1.117493 | 36% — 18/50 |
+
+The calibrated model reduced log loss by **7.83% against the baseline**, with a **10 percentage-point increase in accuracy**. Accuracy is reported only where it was recorded in the notebook.
+
+Log loss evaluates the probability assigned to the outcome that actually occurred. It penalizes confidently wrong predictions more heavily; lower is better. Accuracy counts how often the highest-probability outcome was correct. A predicted 60% chance of winning is a probability estimate, not a guaranteed result.
+
+**These are initial results from a small sample.** They are separate from the website’s public prediction history and do not establish how well the model will perform over a full future season.
+
+### Chronological validation
+
+The original validation fixtures from the three-season dataset were preserved when two earlier seasons were added. This lets the models use more training history while being compared on the same validation matches.
+
+| Fold | Training matches | Validation matches | First validation date |
+| --- | ---: | ---: | --- |
+| 1 | 1,043 | 285 | 2024-03-30 |
+| 2 | 1,329 | 285 | 2025-01-04 |
+| 3 | 1,610 | 285 | 2025-11-01 |
+
+| Model / experiment | Mean validation log loss ↓ |
 | --- | ---: |
-| 2023–24 | 380 |
-| 2024–25 | 380 |
-| 2025–26 | 380 |
+| Historical-frequency baseline | 1.081514 |
+| XGBoost, first tuning stage | 1.008032 |
+| XGBoost, second tuning stage | 1.007953 |
+| Logistic regression, `C=0.1` | 0.998849 |
+| Calibrated logistic regression | **0.996776** |
 
-Source: [OpenFootball's football.json repository](https://github.com/openfootball/football.json), which provides public-domain football fixtures and results under CC0-1.0.
+These folds were used for model development and hyperparameter selection. Their scores are development results, not an independent final test. Recorded outputs and experiment details are in [exploration.ipynb](notebooks/exploration.ipynb); later-season results are in [evaluation.ipynb](notebooks/evaluation.ipynb).
 
-The JSON files include match dates, home and away teams, and scores. They are loaded into pandas DataFrames and combined into a chronological match table.
+## Data and features
 
-Data preparation currently includes:
+The local JSON files contain **1,900 completed historical matches** across 2021/22–2025/26. The current 2026/27 snapshot contains 50 completed matches and 330 unplayed fixtures. These counts describe the checked-in snapshot and will change as results are updated.
 
-- Adding season labels and combining the three datasets.
-- Converting dates to datetime values and sorting matches chronologically.
-- Standardizing inconsistent score formats: 27 records in the 2025–26 file store scores directly as lists rather than under the nested `score.ft` field.
-- Extracting home and away goals into separate columns.
+Data source: [OpenFootball’s football.json repository](https://github.com/openfootball/football.json).
 
-The score-format correction uses recorded results rather than imputing outcomes. These files provide a starting dataset; further checks for duplicate fixtures, consistent team names, and valid results are planned.
+The loader combines season files, adds season labels, sorts by date, and extracts goal totals. It handles both nested `score.ft` values and alternative score-list records. Unplayed fixtures are excluded from training and completed-match feature construction; missing scores are not treated as draws.
 
-## Elo Rating System
+The model uses nine inputs:
 
-Each team starts at **1500 Elo** in the initial implementation. Two functions have been written:
+| Columns | Meaning |
+| --- | --- |
+| `home_elo_before`, `away_elo_before` | Each team’s rating before the match |
+| `elo_difference` | Home Elo minus away Elo |
+| `home_form_5`, `away_form_5` | Average points earned over each team’s last five available matches |
+| `home_goals_scored_5`, `away_goals_scored_5` | Average goals scored over those matches |
+| `home_goals_conceded_5`, `away_goals_conceded_5` | Average goals conceded over those matches |
 
-- `expected_result(home_rating, away_rating)` calculates the home team's expected result value from the rating difference.
-- `update_ratings(home_rating, away_rating, home_goals, away_goals, k=20)` returns updated ratings after a match.
+Form uses three points for a win, one for a draw, and zero for a loss. When fewer than five previous matches are available, averages use the available history. With no previous matches, rolling features are missing; the logistic pipeline handles them with training-fitted median imputation.
 
-Actual results are encoded as 1 for a home win, 0.5 for a draw, and 0 for a home loss. The rating change is:
+Teams start at **1500 Elo**. The current prediction configuration uses **`K=40`** and a **50-point home advantage** when calculating the expected result. Ratings and rolling history carry across season boundaries. Elo is updated after each result; there is no offseason reset or goal-margin adjustment.
 
-```text
-change = K × (actual result − expected result)
+Outcome labels are `0 = home win`, `1 = draw`, and `2 = away win`. A home loss and an away win describe the same outcome, so only three probabilities are needed.
+
+## Modeling decisions
+
+**Baseline.** `DummyClassifier(strategy="prior")` assigns every fixture the outcome frequencies observed in its training set. It provides a reference for whether match-specific features add value.
+
+**Logistic regression.** A pipeline combines median imputation, standardization, and logistic regression. The selected regularization setting is `C=0.1`, with `max_iter=1000`. Preprocessing is fitted within each training split.
+
+**XGBoost.** A two-stage grid search first explores tree count, learning rate, depth, minimum child weight, and L2 regularization; a second stage explores row/column sampling, L1 regularization, and `gamma`. The full grids contain 432 and 36 candidates respectively, each evaluated on three folds. The selected configuration is:
+
+```python
+n_estimators=50
+learning_rate=0.1
+max_depth=1
+min_child_weight=5
+reg_lambda=1
+subsample=1.0
+colsample_bytree=0.8
+reg_alpha=0.1
+gamma=0
 ```
 
-The home team gains this amount and the away team loses the same amount. Unexpected wins earn more points, while unexpected losses cost more. The current version uses `K = 20` and treats all winning margins equally.
+The small improvement from the second search is documented rather than treated as a major gain. The current search uses fixed tree counts, not early stopping.
 
-The Elo expected result represents `P(home win) + 0.5 × P(draw)`; it is not a standalone home-win probability.
+**Calibration.** Initial checks compared predicted probabilities with observed frequencies for all three outcomes, plus home wins by fold. They showed overestimation in the 60–80% home-win bin and underestimation of draws.
 
-The next step is to process all matches chronologically, carry ratings forward between seasons, and save each team's rating before every match. Home advantage, offseason adjustments, and initialization rules for promoted teams are possible later improvements.
+For each calibration experiment, the historical training window is split chronologically at approximately 80/20, keeping calendar days together. The base pipeline fits on the earlier portion. A second logistic regression learns an adjustment from the log-transformed, clipped probabilities on the later portion. Both models are then evaluated on subsequent validation matches.
 
-## Planned Machine Learning and Evaluation
+Calibration reduced mean validation log loss from **1.003321 to 0.996776** for the same reduced-training base model. On the 50-match test set, that base model scored **1.051749 before calibration** and **1.029980 after calibration**. This comparison differs from the uncalibrated model trained on all historical matches in the main results table.
 
-An XGBoost classifier will predict three outcomes: **home win, draw, and away win**. Candidate features include pre-match Elo differences, recent goals scored and conceded, recent results, and days of rest.
+Additional team-strength indicators were considered but deferred because of possible overlap with existing strength and form inputs. Their redundancy has not been established through an ablation experiment.
 
-The evaluation plan includes:
+## Chronology and leakage prevention
 
-- Comparing XGBoost with simple baselines, including an Elo-based probability model.
-- Using chronological training and validation periods rather than random match splits.
-- Tuning hyperparameters on training and validation data only.
-- Evaluating probability quality with log loss and calibration, alongside classification accuracy.
-- Examining errors by season and matchup type.
+- Features are recorded before a match’s result updates Elo, points, or goal history.
+- Cross-validation training dates are strictly earlier than the first validation date.
+- Validation fixtures are identified by season, home team, and away team so they survive changes to row positions.
+- The calibration set is separate from the data used to fit its base model and precedes evaluation.
+- The saved model is fitted using historical seasons; the 2026/27 test labels are not used to fit it.
+- Later evaluation fixtures can use results from earlier evaluation fixtures to update team state. This is sequential evaluation with fixed model parameters, not a forecast of the entire season from a single starting date.
+- Single-fixture predictions rebuild state using completed results from dates strictly before the requested fixture date.
 
-### Preventing data leakage
+Updating team history is different from retraining the model. New scores can update Elo and rolling features while the fitted classifier and calibrator remain unchanged.
 
-Data cleaning and leakage prevention are separate parts of the workflow. Cleaning makes records consistent; leakage prevention ensures predictions only use information available at prediction time.
+## Repository layout
 
-The modeling pipeline will:
+| Path | Purpose |
+| --- | --- |
+| `data/raw/` | Historical and current-season JSON files |
+| `notebooks/exploration.ipynb` | Feature development, chronological validation, tuning, and calibration experiments |
+| `notebooks/evaluation.ipynb` | Later-season evaluation, model export, reload verification, and individual fixture predictions |
+| `src/soccer_predictor/data.py` | Data loading and season definitions |
+| `src/soccer_predictor/features.py` | Elo, rolling features, team state, and fixture inputs |
+| `src/soccer_predictor/validation.py` | Validation-fixture mapping and chronological calibration splits |
+| `src/soccer_predictor/models.py` | Model factories and calibration helpers |
+| `src/soccer_predictor/predict.py` | Reusable single-fixture prediction function |
+| `models/calibrated_logistic.joblib` | Saved base model, calibrator, feature order, class labels, and configuration |
+| `scripts/generate_predictions.py` | Exports probabilities and features for up to ten upcoming fixtures |
+| `scripts/train.py`, `scripts/evaluate.py` | Placeholders for future command-line workflows; currently empty |
+| `website/` | Static HTML, CSS, JavaScript, prediction data, and history data |
+| `requirements.txt` | Python dependencies |
 
-- Record pre-match Elo before updating ratings with that match's outcome.
-- Calculate rolling statistics from previous matches only.
-- Exclude the target match's goals and other post-match information from input features.
-- Fit learned preprocessing steps only on the training portion of each split.
-- Reserve a later period for final evaluation, without using its results to select features or tune parameters.
+The notebooks preserve the experimentation and learning process. Reusable Python modules support evaluation and prediction outside the exploratory notebook.
 
-The three seasons will support chronological Elo calculations. End-of-2025–26 ratings will not be used to predict earlier matches. A final evaluation split will be established before model tuning begins.
+## Run locally
 
-## Planned Season Simulator and Website
+### Python setup
 
-The season simulator will combine the actual league table with predicted outcomes for remaining fixtures. Repeating the simulation will produce estimated title probabilities that can be updated after each matchday.
+Clone the repository and open a terminal in its root:
 
-The simulator will need to handle league tie-breaking rules and document its assumptions about future team strength. Title probabilities will be conditional on the underlying match model and those assumptions.
+```bash
+git clone https://github.com/Pyrokinetic3/soccer-predictor.git
+cd soccer-predictor
+python -m venv .venv
+```
 
-The planned website will provide:
+On Windows PowerShell:
 
-- Team-strength rankings and rating histories.
-- Matchup selection with win, draw, and loss probabilities.
-- Title-probability charts across matchdays.
-- Historical evaluation results and explanations of model limitations.
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
 
-Streamlit is the intended starting point for a Python-based interactive application. Modeling and evaluation will be developed before expanding the interface.
+On macOS or Linux:
 
-## Technology
+```bash
+.venv/bin/python -m pip install -r requirements.txt
+```
 
-| Tool | Role | Status |
-| --- | --- | --- |
-| Python | Data processing and rating calculations | In use |
-| pandas | Loading, cleaning, and organizing match data | In use |
-| Jupyter / VS Code | Development and exploration | In use |
-| NumPy / Matplotlib | Numerical work and visualization | Installed for upcoming work |
-| scikit-learn / XGBoost | Modeling, preprocessing, and evaluation | Planned |
-| Streamlit | Interactive web application | Planned |
+In VS Code, select the `.venv` interpreter and notebook kernel. Open notebooks from the project root or `notebooks/` directory and run their cells in order. Their setup cells resolve the `data/`, `src/`, and `models/` paths.
 
-## Running the Current Notebook
+Dependencies are currently unpinned. Exact numerical reproduction and loading the saved model may depend on matching the original package versions; environment pinning remains a follow-up task.
 
-The current development environment uses Windows, Python, VS Code, and Microsoft's Python and Jupyter extensions.
+### Explore, evaluate, and save the model
 
-1. Download or clone this repository and open its folder in VS Code.
-2. Create a virtual environment from the project terminal:
+1. Run `notebooks/exploration.ipynb` to follow feature construction and model comparisons. Leave `RUN_FULL_SEARCH = False` for quick reevaluation of the selected XGBoost settings. Set it to `True` to rerun both full XGBoost grids. The logistic regression search runs separately.
+2. Run `notebooks/evaluation.ipynb` for the later-season comparison. Its export cell writes `models/calibrated_logistic.joblib`, and its reload check confirms that saved predictions match the original ones. Rerunning the export replaces the existing bundle.
+3. Use the final cells in that notebook to predict an individual fixture using its date and exact team names.
 
-   ```powershell
-   python -m venv .venv
-   ```
+### Preview the website
 
-3. Install the packages used by the notebook:
+The site requires no frontend build or Node installation. From the project root:
 
-   ```powershell
-   .\.venv\Scripts\python.exe -m pip install pandas numpy matplotlib ipykernel
-   ```
+```bash
+python -m http.server 8080 --directory website
+```
 
-4. Open `exploration.ipynb` and select `.venv` as its kernel.
-5. Keep the three JSON files alongside the notebook, then run the cells from top to bottom.
+Open [http://localhost:8080](http://localhost:8080). Use this local server instead of opening `index.html` directly so the browser can load the JSON files.
 
-A dependency file with tested package versions will be added as the project develops. The `.venv` directory is excluded from version control.
+### Generate a new prediction snapshot
 
-## Roadmap
+After updating the local season data, run the exporter with the project environment. On Windows:
 
-- [x] Set up a local Python environment and notebook.
-- [x] Load three seasons of Premier League match records.
-- [x] Standardize score formats and extract goal totals.
-- [x] Implement expected-result and Elo-update functions.
-- [x] Generate historical pre-match Elo ratings and team rankings.
-- [x] Add data validation and checks for rating calculations.
-- [x] Build features using only previously available information.
-- [x] Establish chronological evaluation and baseline models.
-- [x] Train and evaluate XGBoost.
-- [ ] Implement and evaluate season simulations.
-- [ ] Build and deploy an interactive dashboard.
-- [ ] Explore expansion to other domestic leagues and the Champions League.
+```powershell
+.\.venv\Scripts\python.exe scripts/generate_predictions.py
+```
 
-## Limitations
+On macOS or Linux:
 
-The current rating functions do not account for home advantage, goal margin, injuries, transfers, or lineup changes. Match results alone cannot fully describe team strength. Three seasons also provide only three title races, so match-level evaluation will be the primary measure of predictive quality. There are currently no claims of betting profitability or demonstrated predictive accuracy.
+```bash
+.venv/bin/python scripts/generate_predictions.py
+```
+
+The exporter loads the saved model and local results, selects the next ten dated, unplayed fixtures, and writes `website/predictions.json`. It includes the nine input features used by the website cards. The current season is configured as `2026_27`; upcoming-date selection uses London time.
+
+This command does **not** download new results, retrain the model, archive predictions, or deploy the website.
+
+## Website
+
+The interface uses a white background with rainbow accents, a personal introduction, and selectable fixture cards. Cards flip to show Elo, recent form, scoring/conceding averages, and each team’s win/draw/loss probabilities.
+
+| File | Role |
+| --- | --- |
+| `website/index.html` | Page structure and project copy |
+| `website/styles.css` | Responsive styling and flip animations |
+| `website/app.js` | Loads data, renders cards, and displays results history |
+| `website/predictions.json` | Saved forecast snapshot, generation time, history cutoff, and fixture features |
+| `website/history.json` | Public prediction history; initially empty |
+
+Keyboard users can open cards with Enter and return with Escape or the back button. Reduced-motion preferences disable the flip transition. Google Fonts are optional; local sans-serif fonts provide a fallback.
+
+The site currently displays a **saved snapshot**, not a live feed. The contents of `website/` can be served by a static host. Python runs when preparing the data, not in visitors’ browsers.
+
+### Public prediction history
+
+The history interface shows the latest 30 completed matches with recorded pre-kickoff predictions. It is intentionally empty until forecasts are archived and results added. Historical test results are shown separately and are not presented as published forecasts.
+
+Each entry under `history.json` → `fixtures` needs:
+
+| Field | Content |
+| --- | --- |
+| `home_team`, `away_team` | Team names |
+| `recorded_at` | Original forecast timestamp, ISO format with timezone |
+| `kickoff_at` | Verified kickoff timestamp, ISO format with timezone |
+| `probabilities` | Decimal `home_win`, `draw`, and `away_win` values summing to one |
+| `home_goals`, `away_goals` | Completed scores as integers |
+
+The renderer requires completed scores and a recording timestamp before kickoff. The future archive process must preserve authentic timestamps and original probabilities, then attach results without recalculating the old forecast. The full archive should be retained even though the interface displays only 30 entries.
+
+## Limitations and next steps
+
+The model uses match results only: no expected goals, injuries, lineups, transfers, player-level information, or betting odds. New teams start at the same Elo rating, and predictions require available team history. Current data uses dates rather than verified kickoff times, so same-day availability and postponed fixtures need care when adding automation.
+
+Repeated validation experiments can overfit development choices. The 50-match evaluation is small and has now been inspected; future improvements should also be assessed on newly arriving, untouched matches.
+
+- [x] Expand historical data from three seasons to five.
+- [x] Build nine chronological prematch features.
+- [x] Compare a baseline, logistic regression, and tuned XGBoost.
+- [x] Inspect probability calibration and evaluate an adjustment.
+- [x] Evaluate on 50 later-season matches.
+- [x] Save and reload the calibrated model with matching predictions.
+- [x] Export upcoming fixture probabilities and stats.
+- [x] Build the responsive website and results-history interface.
+- [ ] Deploy the updated website.
+- [ ] Automate result retrieval, forecast generation, and site updates.
+- [ ] Archive forecasts before kickoff and attach actual results afterward.
+- [ ] Track log loss, calibration, and accuracy over a larger future sample.
+- [ ] Implement the standalone training/evaluation scripts and pin the environment.
+- [ ] Explore season simulations and league-title probabilities.
+
+## Tools
+
+Python · pandas · NumPy · scikit-learn · XGBoost · Matplotlib · joblib · Jupyter · HTML · CSS · JavaScript
+
+Built by **Aren Khachikian** as a learning project connecting machine learning with a lifelong interest in soccer.
