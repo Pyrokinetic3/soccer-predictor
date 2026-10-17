@@ -908,9 +908,12 @@
       "team1": "Everton FC",
       "team2": "Chelsea FC",
       "score": {
-        "ft": null
+        "ft": [
+          0,
+          2
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560603
     },
     {
@@ -922,7 +925,7 @@
       "score": {
         "ft": null
       },
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "source_id": 560602
     },
     {
@@ -934,7 +937,7 @@
       "score": {
         "ft": null
       },
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "source_id": 560610
     },
     {
@@ -946,7 +949,7 @@
       "score": {
         "ft": null
       },
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "source_id": 560611
     },
     {
