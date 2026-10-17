@@ -923,9 +923,12 @@
       "team1": "Fulham FC",
       "team2": "Hull City AFC",
       "score": {
-        "ft": null
+        "ft": [
+          1,
+          0
+        ]
       },
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "source_id": 560602
     },
     {
@@ -935,9 +938,12 @@
       "team1": "Manchester City FC",
       "team2": "Ipswich Town FC",
       "score": {
-        "ft": null
+        "ft": [
+          3,
+          2
+        ]
       },
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "source_id": 560610
     },
     {
@@ -947,9 +953,12 @@
       "team1": "Brentford FC",
       "team2": "Liverpool FC",
       "score": {
-        "ft": null
+        "ft": [
+          1,
+          2
+        ]
       },
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "source_id": 560611
     },
     {
@@ -959,9 +968,12 @@
       "team1": "Newcastle United FC",
       "team2": "Aston Villa FC",
       "score": {
-        "ft": null
+        "ft": [
+          0,
+          1
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560607
     },
     {
