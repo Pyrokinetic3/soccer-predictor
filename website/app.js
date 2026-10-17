@@ -170,7 +170,7 @@ function renderPredictions(data) {
     $("fixtures-grid").innerHTML =
       '<p class="loading-message">No upcoming fixtures in this snapshot. Check back after the next data update.</p>';
   $("data-note").textContent =
-    "Saved prediction snapshot · Automatic updates are not enabled yet. Percentages may differ slightly from 100% due to rounding.";
+"Predictions refresh automatically four times daily as source results become available. Percentages may differ slightly from 100% due to rounding.";
 }
 function renderHistory(data) {
   if (!Array.isArray(data.fixtures))
@@ -190,7 +190,7 @@ function renderHistory(data) {
   $("history-count").textContent = `${fixtures.length} / 30 results`;
   if (!fixtures.length) {
     $("history-content").innerHTML =
-      '<div class="empty-history"><div class="empty-symbol" aria-hidden="true">↗</div><h3>Every track record starts somewhere.</h3><p>No settled public predictions yet. This space will fill with predictions saved before kickoff and the results that followed. The results update process is coming next.</p></div>';
+      '<div class="empty-history"><div class="empty-symbol" aria-hidden="true">↗</div><h3>Every track record starts somewhere.</h3><p>No settled public predictions yet. This space will fill with predictions saved before kickoff and the results that followed. Results will appear automatically as recorded forecasts settle.</p></div>';
     return;
   }
   const rows = fixtures

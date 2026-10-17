@@ -1,7 +1,8 @@
 numpy
 pandas
 matplotlib
-scikit-learn
+scikit-learn==1.9.1
 xgboost
 ipykernel
-jotlib
+joblib
+tzdata

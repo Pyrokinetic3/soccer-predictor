@@ -1,0 +1,59 @@
+name: Update predictions
+
+on:
+  schedule:
+    # Four runs daily: 00:23, 06:23, 12:23, 18:23 UTC.
+    - cron: "23 0,6,12,18 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-predictions
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Update results and predictions
+        run: python scripts/update_website.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add \
+            data/raw/premier_league_2026_27.json \
+            data/prediction_archive.json \
+            website/predictions.json \
+            website/history.json
+
+          if git diff --cached --quiet; then
+            echo "No data changes to publish."
+            exit 0
+          fi
+
+          git commit -m "Update match results and prediction data"
+          git pull --rebase origin main
+          git push origin HEAD:main
