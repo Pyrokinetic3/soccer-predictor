@@ -177,6 +177,30 @@ def main():
         {"fixtures": {}},
     )["fixtures"]
 
+        # Recover the forecasts published before Matchday 6.
+    original_snapshot = read_json(
+        ROOT / "data" / "predictions_matchday6.json",
+        {"fixtures": []},
+    )
+
+    # Verified timestamp of the Git commit containing this snapshot.
+    published_at = "2026-10-09T05:34:21+00:00"
+
+    for fixture in original_snapshot["fixtures"]:
+        key = fixture_id(
+            fixture["home_team"],
+            fixture["away_team"],
+        )
+
+        if datetime.fromisoformat(
+            published_at
+        ) < midnight(fixture["date"]):
+            archive.setdefault(key, {
+                **fixture,
+                "season": SEASON,
+                "recorded_at": published_at,
+            })
+
     pending = current.loc[
         ~completed & current["date"].notna()
     ].sort_values("date", kind="stable")
