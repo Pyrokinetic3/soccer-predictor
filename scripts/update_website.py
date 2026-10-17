@@ -3,7 +3,6 @@ import math
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
 import joblib
@@ -15,6 +14,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from soccer_predictor.data import load_matches
 from soccer_predictor.features import build_team_state, make_fixture_features
 from soccer_predictor.predict import predict_fixture
+from soccer_predictor.live_data import fetch_current_season
 
 SEASON = "2026_27"
 SOURCE = (
@@ -84,14 +84,11 @@ def main():
 
     previous = read_json(raw_path, {"matches": []})
 
-    # Download the latest current-season data.
-    request = Request(
-        SOURCE,
-        headers={"User-Agent": "soccer-predictor"},
+    # Download fixtures and final results from the API.
+    fresh = fetch_current_season(
+        SEASON,
+        previous["matches"],
     )
-
-    with urlopen(request, timeout=60) as response:
-        fresh = json.load(response)
 
     matches = fresh["matches"]
 
@@ -202,7 +199,9 @@ def main():
             })
 
     pending = current.loc[
-        ~completed & current["date"].notna()
+        ~completed
+        & current["date"].notna()
+        & current["status"].isin(["SCHEDULED", "TIMED"])
     ].sort_values("date", kind="stable")
 
     pending = pending.loc[
