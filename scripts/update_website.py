@@ -340,7 +340,7 @@ def main():
                 results,
                 key=lambda match: match["kickoff_at"],
                 reverse=True,
-            )[:30],
+            ),
         },
     }
 

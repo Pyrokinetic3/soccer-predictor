@@ -173,20 +173,50 @@ function renderPredictions(data) {
 "Predictions refresh automatically four times daily as source results become available. Percentages may differ slightly from 100% due to rounding.";
 }
 function renderHistory(data) {
-  if (!Array.isArray(data.fixtures))
+  if (!Array.isArray(data.fixtures)) {
     throw new Error("Missing history fixtures.");
-  // Display only completed results backed by a timestamped pre-kickoff forecast.
-  const fixtures = data.fixtures
+  }
+
+  // Include every completed match with a forecast saved before kickoff.
+  const settledFixtures = data.fixtures
     .filter(
       (f) =>
         Number.isInteger(f.home_goals) &&
         Number.isInteger(f.away_goals) &&
         f.home_goals >= 0 &&
         f.away_goals >= 0 &&
-        Date.parse(f.recorded_at) < Date.parse(f.kickoff_at),
+        Date.parse(f.recorded_at) < Date.parse(f.kickoff_at)
     )
-    .sort((a, b) => Date.parse(b.kickoff_at) - Date.parse(a.kickoff_at))
-    .slice(0, 30);
+    .sort(
+      (a, b) => Date.parse(b.kickoff_at) - Date.parse(a.kickoff_at)
+    );
+
+  // The highest-probability outcome is the model's pick.
+  const correctCount = settledFixtures.filter((fixture) => {
+    const p = probabilities(fixture);
+    const predicted = p.indexOf(Math.max(...p));
+
+    const actual =
+      fixture.home_goals > fixture.away_goals
+        ? 0
+        : fixture.home_goals === fixture.away_goals
+          ? 1
+          : 2;
+
+    return predicted === actual;
+  }).length;
+
+  const total = settledFixtures.length;
+
+  $("history-accuracy").textContent = total
+    ? `Overall prediction accuracy: ${
+        ((correctCount / total) * 100).toFixed(1)
+      }% · ${correctCount} / ${total} correct`
+    : "Overall prediction accuracy: awaiting results";
+
+  // Limit only the displayed table, not the accuracy calculation.
+  const fixtures = settledFixtures.slice(0, 30);
+
   $("history-count").textContent = `${fixtures.length} / 30 results`;
   if (!fixtures.length) {
     $("history-content").innerHTML =
