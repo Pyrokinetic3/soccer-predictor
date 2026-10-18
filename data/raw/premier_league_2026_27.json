@@ -1028,9 +1028,12 @@
       "team1": "Nottingham Forest FC",
       "team2": "Arsenal FC",
       "score": {
-        "ft": null
+        "ft": [
+          0,
+          1
+        ]
       },
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "source_id": 560608
     },
     {
