@@ -459,6 +459,98 @@
       },
       "season": "2026_27",
       "recorded_at": "2026-10-09T05:34:21+00:00"
+    },
+    "[\"2026_27\", \"Hull City AFC\", \"Brentford FC\"]": {
+      "season": "2026_27",
+      "date": "2026-10-25",
+      "home_team": "Hull City AFC",
+      "away_team": "Brentford FC",
+      "probabilities": {
+        "home_win": 0.31394523830127824,
+        "draw": 0.3206864823724618,
+        "away_win": 0.36536827932625987
+      },
+      "features": {
+        "home_elo_before": 1512.8432645539806,
+        "away_elo_before": 1584.6795478681179,
+        "elo_difference": -71.83628331413729,
+        "home_form_5": 0.6,
+        "away_form_5": 1.2,
+        "home_goals_scored_5": 1.0,
+        "home_goals_conceded_5": 1.4,
+        "away_goals_scored_5": 1.8,
+        "away_goals_conceded_5": 1.4
+      },
+      "recorded_at": "2026-10-18T15:57:14.126901+00:00"
+    },
+    "[\"2026_27\", \"Manchester United FC\", \"AFC Bournemouth\"]": {
+      "season": "2026_27",
+      "date": "2026-10-25",
+      "home_team": "Manchester United FC",
+      "away_team": "AFC Bournemouth",
+      "probabilities": {
+        "home_win": 0.5051793665736166,
+        "draw": 0.2609832539447585,
+        "away_win": 0.23383737948162475
+      },
+      "features": {
+        "home_elo_before": 1633.5656350067213,
+        "away_elo_before": 1598.0246481490701,
+        "elo_difference": 35.540986857651205,
+        "home_form_5": 0.8,
+        "away_form_5": 1.0,
+        "home_goals_scored_5": 1.0,
+        "home_goals_conceded_5": 1.2,
+        "away_goals_scored_5": 1.4,
+        "away_goals_conceded_5": 2.0
+      },
+      "recorded_at": "2026-10-18T15:57:14.126901+00:00"
+    },
+    "[\"2026_27\", \"Sunderland AFC\", \"Leeds United FC\"]": {
+      "season": "2026_27",
+      "date": "2026-10-25",
+      "home_team": "Sunderland AFC",
+      "away_team": "Leeds United FC",
+      "probabilities": {
+        "home_win": 0.30520012300900123,
+        "draw": 0.2582787689835701,
+        "away_win": 0.43652110800742866
+      },
+      "features": {
+        "home_elo_before": 1510.332668021277,
+        "away_elo_before": 1578.3789268435867,
+        "elo_difference": -68.04625882230971,
+        "home_form_5": 0.2,
+        "away_form_5": 1.2,
+        "home_goals_scored_5": 0.8,
+        "home_goals_conceded_5": 2.4,
+        "away_goals_scored_5": 1.4,
+        "away_goals_conceded_5": 1.0
+      },
+      "recorded_at": "2026-10-18T15:57:14.126901+00:00"
+    },
+    "[\"2026_27\", \"Liverpool FC\", \"Brighton & Hove Albion FC\"]": {
+      "season": "2026_27",
+      "date": "2026-10-25",
+      "home_team": "Liverpool FC",
+      "away_team": "Brighton & Hove Albion FC",
+      "probabilities": {
+        "home_win": 0.35039669605224205,
+        "draw": 0.31888303127622697,
+        "away_win": 0.3307202726715309
+      },
+      "features": {
+        "home_elo_before": 1629.4863643638791,
+        "away_elo_before": 1643.4770962760551,
+        "elo_difference": -13.990731912175988,
+        "home_form_5": 2.0,
+        "away_form_5": 2.6,
+        "home_goals_scored_5": 1.0,
+        "home_goals_conceded_5": 0.8,
+        "away_goals_scored_5": 3.2,
+        "away_goals_conceded_5": 0.2
+      },
+      "recorded_at": "2026-10-18T15:57:14.126901+00:00"
     }
   }
 }

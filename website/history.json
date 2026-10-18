@@ -1,6 +1,87 @@
 {
-  "generated_at": "2026-10-17T06:05:51.472840+00:00",
+  "generated_at": "2026-10-18T15:57:14.126901+00:00",
   "fixtures": [
+    {
+      "season": "2026_27",
+      "date": "2026-10-18",
+      "home_team": "AFC Bournemouth",
+      "away_team": "Sunderland AFC",
+      "probabilities": {
+        "home_win": 0.5189556120265709,
+        "draw": 0.22795790960082507,
+        "away_win": 0.25308647837260406
+      },
+      "features": {
+        "home_elo_before": 1584.1503853216589,
+        "away_elo_before": 1524.2069308486882,
+        "elo_difference": 59.94345447297064,
+        "home_form_5": 0.6,
+        "away_form_5": 0.8,
+        "home_goals_scored_5": 1.2,
+        "home_goals_conceded_5": 2.2,
+        "away_goals_scored_5": 1.0,
+        "away_goals_conceded_5": 2.0
+      },
+      "recorded_at": "2026-10-17T15:41:47.855924+00:00",
+      "kickoff_at": "2026-10-18T14:00:00+01:00",
+      "kickoff_time_known": true,
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "season": "2026_27",
+      "date": "2026-10-18",
+      "home_team": "Leeds United FC",
+      "away_team": "Manchester United FC",
+      "probabilities": {
+        "home_win": 0.34979435253032676,
+        "draw": 0.32368161264990164,
+        "away_win": 0.3265240348197717
+      },
+      "features": {
+        "home_elo_before": 1578.0415454619658,
+        "away_elo_before": 1633.9030163883422,
+        "elo_difference": -55.86147092637634,
+        "home_form_5": 1.2,
+        "away_form_5": 1.2,
+        "home_goals_scored_5": 1.4,
+        "home_goals_conceded_5": 1.0,
+        "away_goals_scored_5": 1.8,
+        "away_goals_conceded_5": 1.4
+      },
+      "recorded_at": "2026-10-17T06:05:51.472840+00:00",
+      "kickoff_at": "2026-10-18T14:00:00+01:00",
+      "kickoff_time_known": true,
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "season": "2026_27",
+      "date": "2026-10-18",
+      "home_team": "Brighton & Hove Albion FC",
+      "away_team": "Crystal Palace FC",
+      "probabilities": {
+        "home_win": 0.5845732492878927,
+        "draw": 0.2737777003732076,
+        "away_win": 0.14164905033889963
+      },
+      "features": {
+        "home_elo_before": 1632.774249095204,
+        "away_elo_before": 1507.8438123061712,
+        "elo_difference": 124.93043678903268,
+        "home_form_5": 2.0,
+        "away_form_5": 1.4,
+        "home_goals_scored_5": 2.8,
+        "home_goals_conceded_5": 1.0,
+        "away_goals_scored_5": 1.8,
+        "away_goals_conceded_5": 2.0
+      },
+      "recorded_at": "2026-10-17T15:41:47.855924+00:00",
+      "kickoff_at": "2026-10-18T14:00:00+01:00",
+      "kickoff_time_known": true,
+      "home_goals": 5,
+      "away_goals": 0
+    },
     {
       "date": "2026-10-12",
       "home_team": "Coventry City FC",

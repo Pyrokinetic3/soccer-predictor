@@ -983,9 +983,12 @@
       "team1": "AFC Bournemouth",
       "team2": "Sunderland AFC",
       "score": {
-        "ft": null
+        "ft": [
+          2,
+          0
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560604
     },
     {
@@ -995,9 +998,12 @@
       "team1": "Leeds United FC",
       "team2": "Manchester United FC",
       "score": {
-        "ft": null
+        "ft": [
+          1,
+          1
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560605
     },
     {
@@ -1007,9 +1013,12 @@
       "team1": "Brighton & Hove Albion FC",
       "team2": "Crystal Palace FC",
       "score": {
-        "ft": null
+        "ft": [
+          5,
+          0
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560609
     },
     {
@@ -1021,7 +1030,7 @@
       "score": {
         "ft": null
       },
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "source_id": 560608
     },
     {
