@@ -1043,9 +1043,12 @@
       "team1": "Tottenham Hotspur FC",
       "team2": "Coventry City FC",
       "score": {
-        "ft": null
+        "ft": [
+          3,
+          1
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560606
     },
     {

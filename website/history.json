@@ -1,6 +1,33 @@
 {
-  "generated_at": "2026-10-18T20:51:46.235566+00:00",
+  "generated_at": "2026-10-19T22:26:29.543010+00:00",
   "fixtures": [
+    {
+      "season": "2026_27",
+      "date": "2026-10-19",
+      "home_team": "Tottenham Hotspur FC",
+      "away_team": "Coventry City FC",
+      "probabilities": {
+        "home_win": 0.3585147672799977,
+        "draw": 0.3151214019022505,
+        "away_win": 0.3263638308177518
+      },
+      "features": {
+        "home_elo_before": 1448.5901455291773,
+        "away_elo_before": 1501.6525635091054,
+        "elo_difference": -53.062417979928114,
+        "home_form_5": 0.6,
+        "away_form_5": 1.2,
+        "home_goals_scored_5": 0.6,
+        "home_goals_conceded_5": 1.2,
+        "away_goals_scored_5": 1.0,
+        "away_goals_conceded_5": 1.6
+      },
+      "recorded_at": "2026-10-18T20:51:46.235566+00:00",
+      "kickoff_at": "2026-10-19T20:00:00+01:00",
+      "kickoff_time_known": true,
+      "home_goals": 3,
+      "away_goals": 1
+    },
     {
       "season": "2026_27",
       "date": "2026-10-18",
