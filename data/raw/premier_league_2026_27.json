@@ -1058,9 +1058,12 @@
       "team1": "Ipswich Town FC",
       "team2": "Nottingham Forest FC",
       "score": {
-        "ft": null
+        "ft": [
+          1,
+          1
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560620
     },
     {

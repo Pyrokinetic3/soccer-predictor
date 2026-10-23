@@ -1,31 +1,8 @@
 {
-  "generated_at": "2026-10-21T21:48:29.706400+00:00",
-  "history_through": "2026-10-19",
+  "generated_at": "2026-10-23T21:29:38.045988+00:00",
+  "history_through": "2026-10-23",
   "round": "Next 10 fixtures",
   "fixtures": [
-    {
-      "season": "2026_27",
-      "date": "2026-10-23",
-      "home_team": "Ipswich Town FC",
-      "away_team": "Nottingham Forest FC",
-      "probabilities": {
-        "home_win": 0.25148558875134147,
-        "draw": 0.3205624743158972,
-        "away_win": 0.42795193693276135
-      },
-      "features": {
-        "home_elo_before": 1397.2459377717312,
-        "away_elo_before": 1501.8394097696935,
-        "elo_difference": -104.5934719979623,
-        "home_form_5": 1.2,
-        "away_form_5": 0.8,
-        "home_goals_scored_5": 1.4,
-        "home_goals_conceded_5": 1.8,
-        "away_goals_scored_5": 0.6,
-        "away_goals_conceded_5": 1.2
-      },
-      "recorded_at": "2026-10-21T21:48:29.706400+00:00"
-    },
     {
       "season": "2026_27",
       "date": "2026-10-24",
@@ -232,6 +209,29 @@
         "away_goals_conceded_5": 2.4
       },
       "recorded_at": "2026-10-21T21:48:29.706400+00:00"
+    },
+    {
+      "season": "2026_27",
+      "date": "2026-10-31",
+      "home_team": "Chelsea FC",
+      "away_team": "Manchester United FC",
+      "probabilities": {
+        "home_win": 0.36362977485786124,
+        "draw": 0.2865702087025113,
+        "away_win": 0.3498000164396275
+      },
+      "features": {
+        "home_elo_before": 1591.3877031626325,
+        "away_elo_before": 1633.5656350067213,
+        "elo_difference": -42.17793184408879,
+        "home_form_5": 1.4,
+        "away_form_5": 0.8,
+        "home_goals_scored_5": 2.0,
+        "home_goals_conceded_5": 1.6,
+        "away_goals_scored_5": 1.0,
+        "away_goals_conceded_5": 1.2
+      },
+      "recorded_at": "2026-10-23T21:29:38.045988+00:00"
     }
   ]
 }
