@@ -1087,7 +1087,7 @@
       "score": {
         "ft": null
       },
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "source_id": 560616
     },
     {
@@ -1097,9 +1097,12 @@
       "team1": "Coventry City FC",
       "team2": "Fulham FC",
       "score": {
-        "ft": null
+        "ft": [
+          0,
+          1
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560618
     },
     {

@@ -1,6 +1,33 @@
 {
-  "generated_at": "2026-10-23T21:29:38.045988+00:00",
+  "generated_at": "2026-10-24T16:02:43.859954+00:00",
   "fixtures": [
+    {
+      "season": "2026_27",
+      "date": "2026-10-24",
+      "home_team": "Coventry City FC",
+      "away_team": "Fulham FC",
+      "probabilities": {
+        "home_win": 0.35157882678080005,
+        "draw": 0.28185848479978853,
+        "away_win": 0.3665626884194115
+      },
+      "features": {
+        "home_elo_before": 1481.4762811246403,
+        "away_elo_before": 1498.4863729765157,
+        "elo_difference": -17.01009185187536,
+        "home_form_5": 1.2,
+        "away_form_5": 1.0,
+        "home_goals_scored_5": 1.2,
+        "home_goals_conceded_5": 2.0,
+        "away_goals_scored_5": 1.0,
+        "away_goals_conceded_5": 1.2
+      },
+      "recorded_at": "2026-10-21T21:48:29.706400+00:00",
+      "kickoff_at": "2026-10-24T15:00:00+01:00",
+      "kickoff_time_known": true,
+      "home_goals": 0,
+      "away_goals": 1
+    },
     {
       "season": "2026_27",
       "date": "2026-10-23",
