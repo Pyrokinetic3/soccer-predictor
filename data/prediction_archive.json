@@ -467,8 +467,8 @@
       "away_team": "Brentford FC",
       "probabilities": {
         "home_win": 0.31394523830127824,
-        "draw": 0.32068648237246183,
-        "away_win": 0.3653682793262599
+        "draw": 0.3206864823724618,
+        "away_win": 0.36536827932625987
       },
       "features": {
         "home_elo_before": 1512.8432645539806,
@@ -481,7 +481,7 @@
         "away_goals_scored_5": 1.8,
         "away_goals_conceded_5": 1.4
       },
-      "recorded_at": "2026-10-21T21:48:29.706400+00:00"
+      "recorded_at": "2026-10-24T04:45:18.822934+00:00"
     },
     "[\"2026_27\", \"Manchester United FC\", \"AFC Bournemouth\"]": {
       "season": "2026_27",
@@ -491,7 +491,7 @@
       "probabilities": {
         "home_win": 0.5051793665736166,
         "draw": 0.2609832539447585,
-        "away_win": 0.2338373794816248
+        "away_win": 0.23383737948162475
       },
       "features": {
         "home_elo_before": 1633.5656350067213,
@@ -504,7 +504,7 @@
         "away_goals_scored_5": 1.4,
         "away_goals_conceded_5": 2.0
       },
-      "recorded_at": "2026-10-21T21:48:29.706400+00:00"
+      "recorded_at": "2026-10-24T04:45:18.822934+00:00"
     },
     "[\"2026_27\", \"Sunderland AFC\", \"Leeds United FC\"]": {
       "season": "2026_27",
@@ -536,8 +536,8 @@
       "away_team": "Brighton & Hove Albion FC",
       "probabilities": {
         "home_win": 0.35039669605224205,
-        "draw": 0.318883031276227,
-        "away_win": 0.33072027267153087
+        "draw": 0.31888303127622697,
+        "away_win": 0.3307202726715309
       },
       "features": {
         "home_elo_before": 1629.4863643638791,
@@ -550,7 +550,7 @@
         "away_goals_scored_5": 3.2,
         "away_goals_conceded_5": 0.2
       },
-      "recorded_at": "2026-10-21T21:48:29.706400+00:00"
+      "recorded_at": "2026-10-24T04:45:18.822934+00:00"
     },
     "[\"2026_27\", \"Crystal Palace FC\", \"Newcastle United FC\"]": {
       "season": "2026_27",
@@ -558,7 +558,7 @@
       "home_team": "Crystal Palace FC",
       "away_team": "Newcastle United FC",
       "probabilities": {
-        "home_win": 0.423507070429998,
+        "home_win": 0.42350707042999797,
         "draw": 0.2676431748303833,
         "away_win": 0.30884975473961873
       },
@@ -573,7 +573,7 @@
         "away_goals_scored_5": 1.2,
         "away_goals_conceded_5": 2.4
       },
-      "recorded_at": "2026-10-21T21:48:29.706400+00:00"
+      "recorded_at": "2026-10-24T04:45:18.822934+00:00"
     },
     "[\"2026_27\", \"Chelsea FC\", \"Manchester United FC\"]": {
       "season": "2026_27",
