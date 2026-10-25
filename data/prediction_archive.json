@@ -581,22 +581,22 @@
       "home_team": "Chelsea FC",
       "away_team": "Manchester United FC",
       "probabilities": {
-        "home_win": 0.36362977485786124,
-        "draw": 0.2865702087025113,
-        "away_win": 0.3498000164396275
+        "home_win": 0.36379412451889254,
+        "draw": 0.2845052525576182,
+        "away_win": 0.3517006229234892
       },
       "features": {
-        "home_elo_before": 1591.3877031626325,
-        "away_elo_before": 1633.5656350067213,
-        "elo_difference": -42.17793184408879,
+        "home_elo_before": 1562.1950734272389,
+        "away_elo_before": 1608.7386419299476,
+        "elo_difference": -46.543568502708695,
         "home_form_5": 1.4,
-        "away_form_5": 0.8,
-        "home_goals_scored_5": 2.0,
+        "away_form_5": 0.6,
+        "home_goals_scored_5": 1.8,
         "home_goals_conceded_5": 1.6,
-        "away_goals_scored_5": 1.0,
-        "away_goals_conceded_5": 1.2
+        "away_goals_scored_5": 0.6,
+        "away_goals_conceded_5": 1.4
       },
-      "recorded_at": "2026-10-23T21:29:38.045988+00:00"
+      "recorded_at": "2026-10-25T16:31:04.941005+00:00"
     },
     "[\"2026_27\", \"Manchester City FC\", \"Brighton & Hove Albion FC\"]": {
       "season": "2026_27",
@@ -604,22 +604,22 @@
       "home_team": "Manchester City FC",
       "away_team": "Brighton & Hove Albion FC",
       "probabilities": {
-        "home_win": 0.5764643706136077,
-        "draw": 0.24721920149190407,
-        "away_win": 0.1763164278944882
+        "home_win": 0.5762942028311153,
+        "draw": 0.23841615944954614,
+        "away_win": 0.18528963771933862
       },
       "features": {
-        "home_elo_before": 1803.8678157059683,
-        "away_elo_before": 1643.4770962760551,
-        "elo_difference": 160.39071942991313,
-        "home_form_5": 3.0,
-        "away_form_5": 2.6,
+        "home_elo_before": 1775.5060032649376,
+        "away_elo_before": 1625.5425659938219,
+        "elo_difference": 149.9634372711157,
+        "home_form_5": 2.4,
+        "away_form_5": 2.4,
         "home_goals_scored_5": 2.6,
-        "home_goals_conceded_5": 1.0,
-        "away_goals_scored_5": 3.2,
-        "away_goals_conceded_5": 0.2
+        "home_goals_conceded_5": 1.4,
+        "away_goals_scored_5": 3.0,
+        "away_goals_conceded_5": 0.4
       },
-      "recorded_at": "2026-10-24T20:56:13.487001+00:00"
+      "recorded_at": "2026-10-25T16:31:04.941005+00:00"
     },
     "[\"2026_27\", \"AFC Bournemouth\", \"Leeds United FC\"]": {
       "season": "2026_27",
@@ -627,22 +627,160 @@
       "home_team": "AFC Bournemouth",
       "away_team": "Leeds United FC",
       "probabilities": {
-        "home_win": 0.41962479797561564,
-        "draw": 0.2538632788414289,
-        "away_win": 0.32651192318295547
+        "home_win": 0.4493940147602857,
+        "draw": 0.26426010456046384,
+        "away_win": 0.28634588067925054
       },
       "features": {
-        "home_elo_before": 1598.0246481490701,
+        "home_elo_before": 1622.8516412258439,
         "away_elo_before": 1578.3789268435867,
-        "elo_difference": 19.64572130548345,
-        "home_form_5": 1.0,
+        "elo_difference": 44.47271438225721,
+        "home_form_5": 1.4,
         "away_form_5": 1.2,
-        "home_goals_scored_5": 1.4,
-        "home_goals_conceded_5": 2.0,
+        "home_goals_scored_5": 1.6,
+        "home_goals_conceded_5": 1.6,
         "away_goals_scored_5": 1.4,
         "away_goals_conceded_5": 1.0
       },
-      "recorded_at": "2026-10-24T16:02:43.859954+00:00"
+      "recorded_at": "2026-10-25T16:31:04.941005+00:00"
+    },
+    "[\"2026_27\", \"Coventry City FC\", \"Sunderland AFC\"]": {
+      "season": "2026_27",
+      "date": "2026-10-31",
+      "home_team": "Coventry City FC",
+      "away_team": "Sunderland AFC",
+      "probabilities": {
+        "home_win": 0.3425382053730274,
+        "draw": 0.29590703633113824,
+        "away_win": 0.3615547582958344
+      },
+      "features": {
+        "home_elo_before": 1459.582916128542,
+        "away_elo_before": 1510.332668021277,
+        "elo_difference": -50.74975189273505,
+        "home_form_5": 1.2,
+        "away_form_5": 0.2,
+        "home_goals_scored_5": 1.2,
+        "home_goals_conceded_5": 2.0,
+        "away_goals_scored_5": 0.8,
+        "away_goals_conceded_5": 2.4
+      },
+      "recorded_at": "2026-10-25T16:31:04.941005+00:00"
+    },
+    "[\"2026_27\", \"Hull City AFC\", \"Ipswich Town FC\"]": {
+      "season": "2026_27",
+      "date": "2026-10-31",
+      "home_team": "Hull City AFC",
+      "away_team": "Ipswich Town FC",
+      "probabilities": {
+        "home_win": 0.5238558274374328,
+        "draw": 0.2731379197495948,
+        "away_win": 0.2030062528129725
+      },
+      "features": {
+        "home_elo_before": 1514.0986095845633,
+        "away_elo_before": 1400.3629788285427,
+        "elo_difference": 113.73563075602056,
+        "home_form_5": 0.6,
+        "away_form_5": 1.4,
+        "home_goals_scored_5": 1.2,
+        "home_goals_conceded_5": 1.6,
+        "away_goals_scored_5": 1.6,
+        "away_goals_conceded_5": 1.6
+      },
+      "recorded_at": "2026-10-25T16:31:04.941005+00:00"
+    },
+    "[\"2026_27\", \"Brentford FC\", \"Nottingham Forest FC\"]": {
+      "season": "2026_27",
+      "date": "2026-10-31",
+      "home_team": "Brentford FC",
+      "away_team": "Nottingham Forest FC",
+      "probabilities": {
+        "home_win": 0.49963879725306926,
+        "draw": 0.2720978598001659,
+        "away_win": 0.22826334294676498
+      },
+      "features": {
+        "home_elo_before": 1583.4242028375352,
+        "away_elo_before": 1498.722368712882,
+        "elo_difference": 84.70183412465326,
+        "home_form_5": 1.2,
+        "away_form_5": 0.8,
+        "home_goals_scored_5": 1.8,
+        "home_goals_conceded_5": 1.4,
+        "away_goals_scored_5": 0.8,
+        "away_goals_conceded_5": 1.4
+      },
+      "recorded_at": "2026-10-25T16:31:04.941005+00:00"
+    },
+    "[\"2026_27\", \"Tottenham Hotspur FC\", \"Crystal Palace FC\"]": {
+      "season": "2026_27",
+      "date": "2026-10-31",
+      "home_team": "Tottenham Hotspur FC",
+      "away_team": "Crystal Palace FC",
+      "probabilities": {
+        "home_win": 0.4488094197999125,
+        "draw": 0.31799232206797534,
+        "away_win": 0.23319825813211204
+      },
+      "features": {
+        "home_elo_before": 1497.9590576490361,
+        "away_elo_before": 1475.5238496596212,
+        "elo_difference": 22.43520798941495,
+        "home_form_5": 1.6,
+        "away_form_5": 0.8,
+        "home_goals_scored_5": 1.6,
+        "home_goals_conceded_5": 1.0,
+        "away_goals_scored_5": 1.0,
+        "away_goals_conceded_5": 2.2
+      },
+      "recorded_at": "2026-10-25T16:31:04.941005+00:00"
+    },
+    "[\"2026_27\", \"Aston Villa FC\", \"Fulham FC\"]": {
+      "season": "2026_27",
+      "date": "2026-10-31",
+      "home_team": "Aston Villa FC",
+      "away_team": "Fulham FC",
+      "probabilities": {
+        "home_win": 0.5401071282286295,
+        "draw": 0.2380636321062922,
+        "away_win": 0.22182923966507836
+      },
+      "features": {
+        "home_elo_before": 1627.4901766491475,
+        "away_elo_before": 1520.379737972614,
+        "elo_difference": 107.11043867653348,
+        "home_form_5": 2.0,
+        "away_form_5": 1.6,
+        "home_goals_scored_5": 1.8,
+        "home_goals_conceded_5": 1.4,
+        "away_goals_scored_5": 0.8,
+        "away_goals_conceded_5": 0.6
+      },
+      "recorded_at": "2026-10-25T16:31:04.941005+00:00"
+    },
+    "[\"2026_27\", \"Liverpool FC\", \"Arsenal FC\"]": {
+      "season": "2026_27",
+      "date": "2026-11-01",
+      "home_team": "Liverpool FC",
+      "away_team": "Arsenal FC",
+      "probabilities": {
+        "home_win": 0.3604348762070035,
+        "draw": 0.2593597114239067,
+        "away_win": 0.38020541236908983
+      },
+      "features": {
+        "home_elo_before": 1647.4208946461124,
+        "away_elo_before": 1801.503024064367,
+        "elo_difference": -154.08212941825468,
+        "home_form_5": 2.0,
+        "away_form_5": 2.4,
+        "home_goals_scored_5": 1.0,
+        "home_goals_conceded_5": 0.8,
+        "away_goals_scored_5": 1.4,
+        "away_goals_conceded_5": 0.8
+      },
+      "recorded_at": "2026-10-25T16:31:04.941005+00:00"
     }
   }
 }

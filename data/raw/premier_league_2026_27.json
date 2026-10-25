@@ -1073,9 +1073,12 @@
       "team1": "Aston Villa FC",
       "team2": "Manchester City FC",
       "score": {
-        "ft": null
+        "ft": [
+          2,
+          1
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560614
     },
     {
@@ -1085,9 +1088,12 @@
       "team1": "Arsenal FC",
       "team2": "Everton FC",
       "score": {
-        "ft": null
+        "ft": [
+          2,
+          0
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560616
     },
     {
@@ -1112,9 +1118,12 @@
       "team1": "Chelsea FC",
       "team2": "Tottenham Hotspur FC",
       "score": {
-        "ft": null
+        "ft": [
+          0,
+          2
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560617
     },
     {
@@ -1124,9 +1133,12 @@
       "team1": "Liverpool FC",
       "team2": "Brighton & Hove Albion FC",
       "score": {
-        "ft": null
+        "ft": [
+          2,
+          0
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560612
     },
     {
@@ -1136,9 +1148,12 @@
       "team1": "Crystal Palace FC",
       "team2": "Newcastle United FC",
       "score": {
-        "ft": null
+        "ft": [
+          0,
+          2
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560613
     },
     {
@@ -1148,9 +1163,12 @@
       "team1": "Manchester United FC",
       "team2": "AFC Bournemouth",
       "score": {
-        "ft": null
+        "ft": [
+          0,
+          3
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560615
     },
     {
@@ -1160,9 +1178,12 @@
       "team1": "Hull City AFC",
       "team2": "Brentford FC",
       "score": {
-        "ft": null
+        "ft": [
+          1,
+          1
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560619
     },
     {
