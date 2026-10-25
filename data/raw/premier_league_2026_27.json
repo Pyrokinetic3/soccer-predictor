@@ -1193,9 +1193,12 @@
       "team1": "Sunderland AFC",
       "team2": "Leeds United FC",
       "score": {
-        "ft": null
+        "ft": [
+          0,
+          0
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560621
     },
     {

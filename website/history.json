@@ -1,6 +1,33 @@
 {
-  "generated_at": "2026-10-25T16:31:04.941005+00:00",
+  "generated_at": "2026-10-25T20:56:45.934028+00:00",
   "fixtures": [
+    {
+      "season": "2026_27",
+      "date": "2026-10-25",
+      "home_team": "Sunderland AFC",
+      "away_team": "Leeds United FC",
+      "probabilities": {
+        "home_win": 0.30520012300900123,
+        "draw": 0.2582787689835701,
+        "away_win": 0.43652110800742866
+      },
+      "features": {
+        "home_elo_before": 1510.332668021277,
+        "away_elo_before": 1578.3789268435867,
+        "elo_difference": -68.04625882230971,
+        "home_form_5": 0.2,
+        "away_form_5": 1.2,
+        "home_goals_scored_5": 0.8,
+        "home_goals_conceded_5": 2.4,
+        "away_goals_scored_5": 1.4,
+        "away_goals_conceded_5": 1.0
+      },
+      "recorded_at": "2026-10-18T15:57:14.126901+00:00",
+      "kickoff_at": "2026-10-25T16:30:00+00:00",
+      "kickoff_time_known": true,
+      "home_goals": 0,
+      "away_goals": 0
+    },
     {
       "season": "2026_27",
       "date": "2026-10-25",
