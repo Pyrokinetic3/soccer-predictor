@@ -765,9 +765,9 @@
       "home_team": "Liverpool FC",
       "away_team": "Arsenal FC",
       "probabilities": {
-        "home_win": 0.36043487620700343,
-        "draw": 0.25935971142390674,
-        "away_win": 0.3802054123690898
+        "home_win": 0.3604348762070035,
+        "draw": 0.2593597114239067,
+        "away_win": 0.38020541236908983
       },
       "features": {
         "home_elo_before": 1647.4208946461124,
@@ -780,7 +780,7 @@
         "away_goals_scored_5": 1.4,
         "away_goals_conceded_5": 0.8
       },
-      "recorded_at": "2026-10-30T22:27:15.810482+00:00"
+      "recorded_at": "2026-10-31T05:53:47.589702+00:00"
     },
     "[\"2026_27\", \"Newcastle United FC\", \"Everton FC\"]": {
       "season": "2026_27",
