@@ -1208,9 +1208,12 @@
       "team1": "Chelsea FC",
       "team2": "Manchester United FC",
       "score": {
-        "ft": null
+        "ft": [
+          2,
+          0
+        ]
       },
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "source_id": 560626
     },
     {
@@ -1220,9 +1223,12 @@
       "team1": "Manchester City FC",
       "team2": "Brighton & Hove Albion FC",
       "score": {
-        "ft": null
+        "ft": [
+          0,
+          1
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560623
     },
     {
@@ -1232,9 +1238,12 @@
       "team1": "AFC Bournemouth",
       "team2": "Leeds United FC",
       "score": {
-        "ft": null
+        "ft": [
+          2,
+          0
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560624
     },
     {
@@ -1244,9 +1253,12 @@
       "team1": "Coventry City FC",
       "team2": "Sunderland AFC",
       "score": {
-        "ft": null
+        "ft": [
+          3,
+          1
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560625
     },
     {
@@ -1256,9 +1268,12 @@
       "team1": "Hull City AFC",
       "team2": "Ipswich Town FC",
       "score": {
-        "ft": null
+        "ft": [
+          2,
+          2
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560629
     },
     {
@@ -1268,9 +1283,12 @@
       "team1": "Brentford FC",
       "team2": "Nottingham Forest FC",
       "score": {
-        "ft": null
+        "ft": [
+          2,
+          0
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560630
     },
     {
@@ -1280,9 +1298,12 @@
       "team1": "Tottenham Hotspur FC",
       "team2": "Crystal Palace FC",
       "score": {
-        "ft": null
+        "ft": [
+          2,
+          0
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560627
     },
     {
@@ -1294,7 +1315,7 @@
       "score": {
         "ft": null
       },
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "source_id": 560628
     },
     {
