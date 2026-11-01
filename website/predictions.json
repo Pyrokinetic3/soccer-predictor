@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T06:17:55.261629+00:00",
+  "generated_at": "2026-11-01T13:34:02.752818+00:00",
   "history_through": "2026-10-31",
   "round": "Next 10 fixtures",
   "fixtures": [
@@ -56,8 +56,8 @@
       "away_team": "Coventry City FC",
       "probabilities": {
         "home_win": 0.4582935354413725,
-        "draw": 0.2860645400213488,
-        "away_win": 0.25564192453727874
+        "draw": 0.28606454002134873,
+        "away_win": 0.2556419245372787
       },
       "features": {
         "home_elo_before": 1530.1557422839794,
@@ -70,7 +70,7 @@
         "away_goals_scored_5": 1.8,
         "away_goals_conceded_5": 1.2
       },
-      "recorded_at": "2026-10-31T21:41:45.945751+00:00"
+      "recorded_at": "2026-11-01T13:34:02.752818+00:00"
     },
     {
       "season": "2026_27",
@@ -147,9 +147,9 @@
       "home_team": "Leeds United FC",
       "away_team": "Tottenham Hotspur FC",
       "probabilities": {
-        "home_win": 0.4653150323745438,
-        "draw": 0.2849056581477971,
-        "away_win": 0.24977930947765895
+        "home_win": 0.4653150323745439,
+        "draw": 0.28490565814779717,
+        "away_win": 0.24977930947765903
       },
       "features": {
         "home_elo_before": 1562.7046315967941,
@@ -162,7 +162,7 @@
         "away_goals_scored_5": 2.0,
         "away_goals_conceded_5": 1.0
       },
-      "recorded_at": "2026-10-31T21:41:45.945751+00:00"
+      "recorded_at": "2026-11-01T13:34:02.752818+00:00"
     },
     {
       "season": "2026_27",
@@ -171,7 +171,7 @@
       "away_team": "Liverpool FC",
       "probabilities": {
         "home_win": 0.25048014450408523,
-        "draw": 0.25378108776714314,
+        "draw": 0.2537810877671432,
         "away_win": 0.4957387677287716
       },
       "features": {
@@ -185,7 +185,7 @@
         "away_goals_scored_5": 1.0,
         "away_goals_conceded_5": 0.8
       },
-      "recorded_at": "2026-10-31T21:41:45.945751+00:00"
+      "recorded_at": "2026-11-01T13:34:02.752818+00:00"
     },
     {
       "season": "2026_27",
@@ -216,9 +216,9 @@
       "home_team": "Ipswich Town FC",
       "away_team": "AFC Bournemouth",
       "probabilities": {
-        "home_win": 0.20019824757097612,
-        "draw": 0.3254179901426844,
-        "away_win": 0.4743837622863395
+        "home_win": 0.20019824757097615,
+        "draw": 0.3254179901426843,
+        "away_win": 0.4743837622863394
       },
       "features": {
         "home_elo_before": 1409.1474607396935,
@@ -231,7 +231,7 @@
         "away_goals_scored_5": 1.6,
         "away_goals_conceded_5": 1.2
       },
-      "recorded_at": "2026-10-31T21:41:45.945751+00:00"
+      "recorded_at": "2026-11-01T13:34:02.752818+00:00"
     }
   ]
 }
