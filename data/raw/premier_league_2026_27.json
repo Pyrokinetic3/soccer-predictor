@@ -1313,9 +1313,12 @@
       "team1": "Aston Villa FC",
       "team2": "Fulham FC",
       "score": {
-        "ft": null
+        "ft": [
+          1,
+          1
+        ]
       },
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "source_id": 560628
     },
     {
