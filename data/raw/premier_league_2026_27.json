@@ -1343,9 +1343,12 @@
       "team1": "Newcastle United FC",
       "team2": "Everton FC",
       "score": {
-        "ft": null
+        "ft": [
+          0,
+          1
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560622
     },
     {
