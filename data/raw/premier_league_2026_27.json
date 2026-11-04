@@ -2099,18 +2099,6 @@
       "round": "Matchday 16",
       "date": "2026-12-19",
       "time": "15:00",
-      "team1": "Nottingham Forest FC",
-      "team2": "Everton FC",
-      "score": {
-        "ft": null
-      },
-      "status": "TIMED",
-      "source_id": 560694
-    },
-    {
-      "round": "Matchday 16",
-      "date": "2026-12-19",
-      "time": "15:00",
       "team1": "Manchester City FC",
       "team2": "Hull City AFC",
       "score": {
@@ -2154,6 +2142,18 @@
       },
       "status": "TIMED",
       "source_id": 560693
+    },
+    {
+      "round": "Matchday 16",
+      "date": "2026-12-20",
+      "time": "14:00",
+      "team1": "Nottingham Forest FC",
+      "team2": "Everton FC",
+      "score": {
+        "ft": null
+      },
+      "status": "TIMED",
+      "source_id": 560694
     },
     {
       "round": "Matchday 16",
