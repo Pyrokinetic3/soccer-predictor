@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T06:08:31.299841+00:00",
+  "generated_at": "2026-11-07T13:13:29.477222+00:00",
   "history_through": "2026-11-06",
   "round": "Next 10 fixtures",
   "fixtures": [
@@ -69,29 +69,6 @@
         "home_goals_conceded_5": 0.8,
         "away_goals_scored_5": 1.2,
         "away_goals_conceded_5": 1.6
-      },
-      "recorded_at": "2026-11-06T19:29:26.574902+00:00"
-    },
-    {
-      "season": "2026_27",
-      "date": "2026-11-07",
-      "home_team": "Leeds United FC",
-      "away_team": "Tottenham Hotspur FC",
-      "probabilities": {
-        "home_win": 0.4653150323745438,
-        "draw": 0.2849056581477971,
-        "away_win": 0.24977930947765895
-      },
-      "features": {
-        "home_elo_before": 1562.7046315967941,
-        "away_elo_before": 1513.8487333142116,
-        "elo_difference": 48.85589828258253,
-        "home_form_5": 0.6,
-        "away_form_5": 2.0,
-        "home_goals_scored_5": 0.4,
-        "home_goals_conceded_5": 1.0,
-        "away_goals_scored_5": 2.0,
-        "away_goals_conceded_5": 1.0
       },
       "recorded_at": "2026-11-06T19:29:26.574902+00:00"
     },
@@ -232,6 +209,29 @@
         "away_goals_conceded_5": 0.8
       },
       "recorded_at": "2026-11-07T06:08:31.299841+00:00"
+    },
+    {
+      "season": "2026_27",
+      "date": "2026-11-21",
+      "home_team": "Coventry City FC",
+      "away_team": "Crystal Palace FC",
+      "probabilities": {
+        "home_win": 0.4442086279397749,
+        "draw": 0.28407513838197734,
+        "away_win": 0.2717162336782477
+      },
+      "features": {
+        "home_elo_before": 1466.531120963654,
+        "away_elo_before": 1459.6341739944457,
+        "elo_difference": 6.896946969208329,
+        "home_form_5": 1.2,
+        "away_form_5": 0.8,
+        "home_goals_scored_5": 1.8,
+        "home_goals_conceded_5": 1.8,
+        "away_goals_scored_5": 0.6,
+        "away_goals_conceded_5": 2.0
+      },
+      "recorded_at": "2026-11-07T13:13:29.477222+00:00"
     }
   ]
 }

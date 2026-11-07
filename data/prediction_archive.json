@@ -1057,6 +1057,29 @@
         "away_goals_conceded_5": 0.8
       },
       "recorded_at": "2026-11-07T06:08:31.299841+00:00"
+    },
+    "[\"2026_27\", \"Coventry City FC\", \"Crystal Palace FC\"]": {
+      "season": "2026_27",
+      "date": "2026-11-21",
+      "home_team": "Coventry City FC",
+      "away_team": "Crystal Palace FC",
+      "probabilities": {
+        "home_win": 0.4442086279397749,
+        "draw": 0.28407513838197734,
+        "away_win": 0.2717162336782477
+      },
+      "features": {
+        "home_elo_before": 1466.531120963654,
+        "away_elo_before": 1459.6341739944457,
+        "elo_difference": 6.896946969208329,
+        "home_form_5": 1.2,
+        "away_form_5": 0.8,
+        "home_goals_scored_5": 1.8,
+        "home_goals_conceded_5": 1.8,
+        "away_goals_scored_5": 0.6,
+        "away_goals_conceded_5": 2.0
+      },
+      "recorded_at": "2026-11-07T13:13:29.477222+00:00"
     }
   }
 }
