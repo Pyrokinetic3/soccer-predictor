@@ -1034,6 +1034,29 @@
         "away_goals_conceded_5": 1.2
       },
       "recorded_at": "2026-11-06T19:29:26.574902+00:00"
+    },
+    "[\"2026_27\", \"Newcastle United FC\", \"Arsenal FC\"]": {
+      "season": "2026_27",
+      "date": "2026-11-21",
+      "home_team": "Newcastle United FC",
+      "away_team": "Arsenal FC",
+      "probabilities": {
+        "home_win": 0.2098380832371467,
+        "draw": 0.2632169459338838,
+        "away_win": 0.5269449708289696
+      },
+      "features": {
+        "home_elo_before": 1517.1594315227421,
+        "away_elo_before": 1815.6845981339027,
+        "elo_difference": -298.52516661116056,
+        "home_form_5": 1.2,
+        "away_form_5": 2.4,
+        "home_goals_scored_5": 1.0,
+        "home_goals_conceded_5": 1.4,
+        "away_goals_scored_5": 1.2,
+        "away_goals_conceded_5": 0.8
+      },
+      "recorded_at": "2026-11-07T06:08:31.299841+00:00"
     }
   }
 }

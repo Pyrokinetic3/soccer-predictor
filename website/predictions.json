@@ -1,31 +1,8 @@
 {
-  "generated_at": "2026-11-06T19:29:26.574902+00:00",
-  "history_through": "2026-11-02",
+  "generated_at": "2026-11-07T06:08:31.299841+00:00",
+  "history_through": "2026-11-06",
   "round": "Next 10 fixtures",
   "fixtures": [
-    {
-      "season": "2026_27",
-      "date": "2026-11-06",
-      "home_team": "Everton FC",
-      "away_team": "Coventry City FC",
-      "probabilities": {
-        "home_win": 0.48479512480084,
-        "draw": 0.2772007438392142,
-        "away_win": 0.23800413135994578
-      },
-      "features": {
-        "home_elo_before": 1553.6007581654576,
-        "away_elo_before": 1479.6858203298855,
-        "elo_difference": 73.91493783557212,
-        "home_form_5": 1.4,
-        "away_form_5": 1.8,
-        "home_goals_scored_5": 0.8,
-        "home_goals_conceded_5": 1.2,
-        "away_goals_scored_5": 1.8,
-        "away_goals_conceded_5": 1.2
-      },
-      "recorded_at": "2026-11-04T19:51:26.911420+00:00"
-    },
     {
       "season": "2026_27",
       "date": "2026-11-07",
@@ -232,6 +209,29 @@
         "away_goals_conceded_5": 1.2
       },
       "recorded_at": "2026-11-06T19:29:26.574902+00:00"
+    },
+    {
+      "season": "2026_27",
+      "date": "2026-11-21",
+      "home_team": "Newcastle United FC",
+      "away_team": "Arsenal FC",
+      "probabilities": {
+        "home_win": 0.2098380832371467,
+        "draw": 0.2632169459338838,
+        "away_win": 0.5269449708289696
+      },
+      "features": {
+        "home_elo_before": 1517.1594315227421,
+        "away_elo_before": 1815.6845981339027,
+        "elo_difference": -298.52516661116056,
+        "home_form_5": 1.2,
+        "away_form_5": 2.4,
+        "home_goals_scored_5": 1.0,
+        "home_goals_conceded_5": 1.4,
+        "away_goals_scored_5": 1.2,
+        "away_goals_conceded_5": 0.8
+      },
+      "recorded_at": "2026-11-07T06:08:31.299841+00:00"
     }
   ]
 }
