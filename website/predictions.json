@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T21:57:07.665327+00:00",
+  "generated_at": "2026-11-08T13:35:19.917409+00:00",
   "history_through": "2026-11-07",
   "round": "Next 10 fixtures",
   "fixtures": [
@@ -126,7 +126,7 @@
       "probabilities": {
         "home_win": 0.21083591327394877,
         "draw": 0.2535260322150067,
-        "away_win": 0.5356380545110445
+        "away_win": 0.5356380545110446
       },
       "features": {
         "home_elo_before": 1520.6739858716287,
@@ -139,7 +139,7 @@
         "away_goals_scored_5": 1.4,
         "away_goals_conceded_5": 0.2
       },
-      "recorded_at": "2026-11-07T21:57:07.665327+00:00"
+      "recorded_at": "2026-11-08T13:35:19.917409+00:00"
     },
     {
       "season": "2026_27",
@@ -148,8 +148,8 @@
       "away_team": "Crystal Palace FC",
       "probabilities": {
         "home_win": 0.4442086279397749,
-        "draw": 0.28407513838197734,
-        "away_win": 0.2717162336782477
+        "draw": 0.2840751383819774,
+        "away_win": 0.2717162336782478
       },
       "features": {
         "home_elo_before": 1466.531120963654,
@@ -162,7 +162,7 @@
         "away_goals_scored_5": 0.6,
         "away_goals_conceded_5": 2.0
       },
-      "recorded_at": "2026-11-07T13:13:29.477222+00:00"
+      "recorded_at": "2026-11-08T13:35:19.917409+00:00"
     },
     {
       "season": "2026_27",
@@ -217,8 +217,8 @@
       "away_team": "Leeds United FC",
       "probabilities": {
         "home_win": 0.4188519536758872,
-        "draw": 0.2842335356141924,
-        "away_win": 0.29691451070992037
+        "draw": 0.28423353561419246,
+        "away_win": 0.2969145107099204
       },
       "features": {
         "home_elo_before": 1581.9961117999808,
@@ -231,7 +231,7 @@
         "away_goals_scored_5": 0.6,
         "away_goals_conceded_5": 1.0
       },
-      "recorded_at": "2026-11-07T21:57:07.665327+00:00"
+      "recorded_at": "2026-11-08T13:35:19.917409+00:00"
     }
   ]
 }
