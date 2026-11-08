@@ -1433,9 +1433,12 @@
       "team1": "Crystal Palace FC",
       "team2": "Liverpool FC",
       "score": {
-        "ft": null
+        "ft": [
+          1,
+          3
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560635
     },
     {
@@ -1445,9 +1448,12 @@
       "team1": "Sunderland AFC",
       "team2": "Chelsea FC",
       "score": {
-        "ft": null
+        "ft": [
+          1,
+          0
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560636
     },
     {
@@ -1457,9 +1463,12 @@
       "team1": "Ipswich Town FC",
       "team2": "AFC Bournemouth",
       "score": {
-        "ft": null
+        "ft": [
+          1,
+          2
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560637
     },
     {
@@ -1469,9 +1478,12 @@
       "team1": "Brighton & Hove Albion FC",
       "team2": "Brentford FC",
       "score": {
-        "ft": null
+        "ft": [
+          2,
+          0
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560638
     },
     {
@@ -1481,9 +1493,12 @@
       "team1": "Manchester United FC",
       "team2": "Aston Villa FC",
       "score": {
-        "ft": null
+        "ft": [
+          4,
+          4
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560639
     },
     {
