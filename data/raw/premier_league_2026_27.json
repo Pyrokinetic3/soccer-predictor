@@ -1508,9 +1508,12 @@
       "team1": "Manchester City FC",
       "team2": "Fulham FC",
       "score": {
-        "ft": null
+        "ft": [
+          1,
+          1
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560643
     },
     {
@@ -1520,9 +1523,12 @@
       "team1": "Chelsea FC",
       "team2": "Leeds United FC",
       "score": {
-        "ft": null
+        "ft": [
+          1,
+          4
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560642
     },
     {
@@ -1532,9 +1538,12 @@
       "team1": "Aston Villa FC",
       "team2": "Sunderland AFC",
       "score": {
-        "ft": null
+        "ft": [
+          0,
+          0
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560644
     },
     {
@@ -1544,9 +1553,12 @@
       "team1": "AFC Bournemouth",
       "team2": "Nottingham Forest FC",
       "score": {
-        "ft": null
+        "ft": [
+          2,
+          0
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560647
     },
     {
@@ -1556,9 +1568,12 @@
       "team1": "Tottenham Hotspur FC",
       "team2": "Ipswich Town FC",
       "score": {
-        "ft": null
+        "ft": [
+          2,
+          0
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560648
     },
     {
@@ -1568,9 +1583,12 @@
       "team1": "Coventry City FC",
       "team2": "Crystal Palace FC",
       "score": {
-        "ft": null
+        "ft": [
+          3,
+          2
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560650
     },
     {
@@ -1582,7 +1600,7 @@
       "score": {
         "ft": null
       },
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "source_id": 560651
     },
     {
