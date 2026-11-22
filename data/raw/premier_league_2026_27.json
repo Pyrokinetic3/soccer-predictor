@@ -1613,9 +1613,12 @@
       "team1": "Hull City AFC",
       "team2": "Brighton & Hove Albion FC",
       "score": {
-        "ft": null
+        "ft": [
+          2,
+          0
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560646
     },
     {
@@ -1625,9 +1628,12 @@
       "team1": "Liverpool FC",
       "team2": "Manchester United FC",
       "score": {
-        "ft": null
+        "ft": [
+          4,
+          0
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560645
     },
     {
