@@ -1598,9 +1598,12 @@
       "team1": "Newcastle United FC",
       "team2": "Arsenal FC",
       "score": {
-        "ft": null
+        "ft": [
+          2,
+          2
+        ]
       },
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "source_id": 560651
     },
     {

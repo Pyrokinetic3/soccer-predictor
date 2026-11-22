@@ -1386,22 +1386,22 @@
       "home_team": "Arsenal FC",
       "away_team": "Manchester City FC",
       "probabilities": {
-        "home_win": 0.5898048919986069,
-        "draw": 0.24084666652928394,
-        "away_win": 0.16934844147210917
+        "home_win": 0.5831768122490323,
+        "draw": 0.2384385423819438,
+        "away_win": 0.17838464536902396
       },
       "features": {
-        "home_elo_before": 1820.1487641416777,
+        "home_elo_before": 1807.8348126780165,
         "away_elo_before": 1702.4211638903678,
-        "elo_difference": 117.72760025130992,
-        "home_form_5": 3.0,
+        "elo_difference": 105.41364878764875,
+        "home_form_5": 2.6,
         "away_form_5": 0.8,
         "home_goals_scored_5": 1.4,
-        "home_goals_conceded_5": 0.2,
+        "home_goals_conceded_5": 0.4,
         "away_goals_scored_5": 1.2,
         "away_goals_conceded_5": 1.8
       },
-      "recorded_at": "2026-11-21T19:24:25.120392+00:00"
+      "recorded_at": "2026-11-22T07:00:35.269806+00:00"
     },
     "[\"2026_27\", \"Sunderland AFC\", \"Tottenham Hotspur FC\"]": {
       "season": "2026_27",
