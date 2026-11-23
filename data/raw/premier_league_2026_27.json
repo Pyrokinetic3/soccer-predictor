@@ -1643,9 +1643,12 @@
       "team1": "Brentford FC",
       "team2": "Everton FC",
       "score": {
-        "ft": null
+        "ft": [
+          4,
+          0
+        ]
       },
-      "status": "TIMED",
+      "status": "FINISHED",
       "source_id": 560649
     },
     {

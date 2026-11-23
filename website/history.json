@@ -1,6 +1,33 @@
 {
-  "generated_at": "2026-11-22T19:47:38.210240+00:00",
+  "generated_at": "2026-11-23T23:59:42.338882+00:00",
   "fixtures": [
+    {
+      "season": "2026_27",
+      "date": "2026-11-23",
+      "home_team": "Brentford FC",
+      "away_team": "Everton FC",
+      "probabilities": {
+        "home_win": 0.47006359285678706,
+        "draw": 0.2629443433720039,
+        "away_win": 0.2669920637712091
+      },
+      "features": {
+        "home_elo_before": 1582.1598071584099,
+        "away_elo_before": 1566.755457531689,
+        "elo_difference": 15.404349626720887,
+        "home_form_5": 1.0,
+        "away_form_5": 1.4,
+        "home_goals_scored_5": 1.2,
+        "home_goals_conceded_5": 1.4,
+        "away_goals_scored_5": 1.2,
+        "away_goals_conceded_5": 1.4
+      },
+      "recorded_at": "2026-11-21T19:24:25.120392+00:00",
+      "kickoff_at": "2026-11-23T20:00:00+00:00",
+      "kickoff_time_known": true,
+      "home_goals": 4,
+      "away_goals": 0
+    },
     {
       "season": "2026_27",
       "date": "2026-11-22",

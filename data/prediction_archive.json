@@ -1317,22 +1317,22 @@
       "home_team": "Manchester United FC",
       "away_team": "Brentford FC",
       "probabilities": {
-        "home_win": 0.4069884726201623,
-        "draw": 0.2182829630181897,
-        "away_win": 0.3747285643616479
+        "home_win": 0.3748767121132546,
+        "draw": 0.222649438937147,
+        "away_win": 0.4024738489495983
       },
       "features": {
         "home_elo_before": 1573.8485810741552,
-        "away_elo_before": 1582.1598071584099,
-        "elo_difference": -8.311226084254713,
+        "away_elo_before": 1598.4386825945135,
+        "elo_difference": -24.590101520358303,
         "home_form_5": 0.4,
-        "away_form_5": 1.0,
+        "away_form_5": 1.4,
         "home_goals_scored_5": 1.0,
         "home_goals_conceded_5": 2.8,
-        "away_goals_scored_5": 1.2,
-        "away_goals_conceded_5": 1.4
+        "away_goals_scored_5": 1.6,
+        "away_goals_conceded_5": 1.0
       },
-      "recorded_at": "2026-11-23T07:49:36.485930+00:00"
+      "recorded_at": "2026-11-23T23:59:42.338882+00:00"
     },
     "[\"2026_27\", \"Ipswich Town FC\", \"Aston Villa FC\"]": {
       "season": "2026_27",
@@ -1455,22 +1455,45 @@
       "home_team": "Everton FC",
       "away_team": "Liverpool FC",
       "probabilities": {
-        "home_win": 0.3352469028563483,
-        "draw": 0.2852079872640689,
-        "away_win": 0.37954510987958273
+        "home_win": 0.3086788131711141,
+        "draw": 0.26427702917235185,
+        "away_win": 0.4270441576565339
       },
       "features": {
-        "home_elo_before": 1566.755457531689,
+        "home_elo_before": 1550.4765820955854,
         "away_elo_before": 1660.3532700151786,
-        "elo_difference": -93.59781248348963,
-        "home_form_5": 1.4,
+        "elo_difference": -109.87668791959322,
+        "home_form_5": 1.2,
         "away_form_5": 2.4,
-        "home_goals_scored_5": 1.2,
-        "home_goals_conceded_5": 1.4,
+        "home_goals_scored_5": 0.8,
+        "home_goals_conceded_5": 1.8,
         "away_goals_scored_5": 2.2,
         "away_goals_conceded_5": 0.6
       },
-      "recorded_at": "2026-11-23T07:49:36.485930+00:00"
+      "recorded_at": "2026-11-23T23:59:42.338882+00:00"
+    },
+    "[\"2026_27\", \"Brighton & Hove Albion FC\", \"Newcastle United FC\"]": {
+      "season": "2026_27",
+      "date": "2026-11-29",
+      "home_team": "Brighton & Hove Albion FC",
+      "away_team": "Newcastle United FC",
+      "probabilities": {
+        "home_win": 0.5070882767801016,
+        "draw": 0.28004586062378517,
+        "away_win": 0.2128658625961133
+      },
+      "features": {
+        "home_elo_before": 1643.2155823145727,
+        "away_elo_before": 1532.9879373352899,
+        "elo_difference": 110.22764497928279,
+        "home_form_5": 1.8,
+        "away_form_5": 1.0,
+        "home_goals_scored_5": 1.6,
+        "home_goals_conceded_5": 0.8,
+        "away_goals_scored_5": 1.0,
+        "away_goals_conceded_5": 1.0
+      },
+      "recorded_at": "2026-11-23T23:59:42.338882+00:00"
     }
   }
 }
