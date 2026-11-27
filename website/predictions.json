@@ -1,31 +1,8 @@
 {
-  "generated_at": "2026-11-25T21:47:56.846602+00:00",
+  "generated_at": "2026-11-27T21:25:26.622976+00:00",
   "history_through": "2026-11-23",
   "round": "Next 10 fixtures",
   "fixtures": [
-    {
-      "season": "2026_27",
-      "date": "2026-11-27",
-      "home_team": "Nottingham Forest FC",
-      "away_team": "Chelsea FC",
-      "probabilities": {
-        "home_win": 0.38545114369899486,
-        "draw": 0.2888364722666449,
-        "away_win": 0.32571238403436026
-      },
-      "features": {
-        "home_elo_before": 1506.4493955594598,
-        "away_elo_before": 1537.796890313375,
-        "elo_difference": -31.347494753915043,
-        "home_form_5": 0.8,
-        "away_form_5": 1.2,
-        "home_goals_scored_5": 0.8,
-        "home_goals_conceded_5": 1.4,
-        "away_goals_scored_5": 1.0,
-        "away_goals_conceded_5": 1.4
-      },
-      "recorded_at": "2026-11-21T19:24:25.120392+00:00"
-    },
     {
       "season": "2026_27",
       "date": "2026-11-28",
@@ -33,7 +10,7 @@
       "away_team": "Coventry City FC",
       "probabilities": {
         "home_win": 0.5485515892085935,
-        "draw": 0.27911785742478096,
+        "draw": 0.2791178574247809,
         "away_win": 0.17233055336662567
       },
       "features": {
@@ -47,7 +24,7 @@
         "away_goals_scored_5": 1.6,
         "away_goals_conceded_5": 2.0
       },
-      "recorded_at": "2026-11-25T21:47:56.846602+00:00"
+      "recorded_at": "2026-11-27T21:25:26.622976+00:00"
     },
     {
       "season": "2026_27",
@@ -78,9 +55,9 @@
       "home_team": "Ipswich Town FC",
       "away_team": "Aston Villa FC",
       "probabilities": {
-        "home_win": 0.19931587355436362,
-        "draw": 0.3078316512663003,
-        "away_win": 0.49285247517933606
+        "home_win": 0.19931587355436367,
+        "draw": 0.3078316512663004,
+        "away_win": 0.49285247517933595
       },
       "features": {
         "home_elo_before": 1386.7712441084639,
@@ -93,7 +70,7 @@
         "away_goals_scored_5": 1.6,
         "away_goals_conceded_5": 1.2
       },
-      "recorded_at": "2026-11-25T21:47:56.846602+00:00"
+      "recorded_at": "2026-11-27T21:25:26.622976+00:00"
     },
     {
       "season": "2026_27",
@@ -101,9 +78,9 @@
       "home_team": "Crystal Palace FC",
       "away_team": "Hull City AFC",
       "probabilities": {
-        "home_win": 0.24903888945294203,
-        "draw": 0.2427891834704733,
-        "away_win": 0.5081719270765847
+        "home_win": 0.24903888945294206,
+        "draw": 0.24278918347047332,
+        "away_win": 0.5081719270765845
       },
       "features": {
         "home_elo_before": 1430.4433238452998,
@@ -116,7 +93,7 @@
         "away_goals_scored_5": 1.0,
         "away_goals_conceded_5": 1.0
       },
-      "recorded_at": "2026-11-25T21:47:56.846602+00:00"
+      "recorded_at": "2026-11-27T21:25:26.622976+00:00"
     },
     {
       "season": "2026_27",
@@ -124,8 +101,8 @@
       "home_team": "Arsenal FC",
       "away_team": "Manchester City FC",
       "probabilities": {
-        "home_win": 0.5831768122490322,
-        "draw": 0.23843854238194387,
+        "home_win": 0.5831768122490323,
+        "draw": 0.2384385423819438,
         "away_win": 0.17838464536902396
       },
       "features": {
@@ -139,7 +116,7 @@
         "away_goals_scored_5": 1.2,
         "away_goals_conceded_5": 1.8
       },
-      "recorded_at": "2026-11-25T21:47:56.846602+00:00"
+      "recorded_at": "2026-11-27T21:25:26.622976+00:00"
     },
     {
       "season": "2026_27",
@@ -170,7 +147,7 @@
       "home_team": "Fulham FC",
       "away_team": "AFC Bournemouth",
       "probabilities": {
-        "home_win": 0.3170349127172434,
+        "home_win": 0.31703491271724343,
         "draw": 0.3188443798835779,
         "away_win": 0.3641207073991787
       },
@@ -185,7 +162,7 @@
         "away_goals_scored_5": 2.2,
         "away_goals_conceded_5": 0.2
       },
-      "recorded_at": "2026-11-25T21:47:56.846602+00:00"
+      "recorded_at": "2026-11-27T21:25:26.622976+00:00"
     },
     {
       "season": "2026_27",
@@ -194,8 +171,8 @@
       "away_team": "Liverpool FC",
       "probabilities": {
         "home_win": 0.3086788131711141,
-        "draw": 0.26427702917235185,
-        "away_win": 0.4270441576565339
+        "draw": 0.2642770291723519,
+        "away_win": 0.427044157656534
       },
       "features": {
         "home_elo_before": 1550.4765820955854,
@@ -208,7 +185,7 @@
         "away_goals_scored_5": 2.2,
         "away_goals_conceded_5": 0.6
       },
-      "recorded_at": "2026-11-25T21:47:56.846602+00:00"
+      "recorded_at": "2026-11-27T21:25:26.622976+00:00"
     },
     {
       "season": "2026_27",
@@ -232,6 +209,29 @@
         "away_goals_conceded_5": 1.0
       },
       "recorded_at": "2026-11-23T23:59:42.338882+00:00"
+    },
+    {
+      "season": "2026_27",
+      "date": "2026-12-01",
+      "home_team": "Coventry City FC",
+      "away_team": "Ipswich Town FC",
+      "probabilities": {
+        "home_win": 0.45255957052423024,
+        "draw": 0.2934207704257397,
+        "away_win": 0.25401965905003004
+      },
+      "features": {
+        "home_elo_before": 1482.5515229816424,
+        "away_elo_before": 1386.7712441084639,
+        "elo_difference": 95.78027887317853,
+        "home_form_5": 1.2,
+        "away_form_5": 0.4,
+        "home_goals_scored_5": 1.6,
+        "home_goals_conceded_5": 2.0,
+        "away_goals_scored_5": 1.2,
+        "away_goals_conceded_5": 2.0
+      },
+      "recorded_at": "2026-11-27T21:25:26.622976+00:00"
     }
   ]
 }
