@@ -1,6 +1,33 @@
 {
-  "generated_at": "2026-11-23T23:59:42.338882+00:00",
+  "generated_at": "2026-11-28T07:58:21.231401+00:00",
   "fixtures": [
+    {
+      "season": "2026_27",
+      "date": "2026-11-27",
+      "home_team": "Nottingham Forest FC",
+      "away_team": "Chelsea FC",
+      "probabilities": {
+        "home_win": 0.38545114369899486,
+        "draw": 0.2888364722666449,
+        "away_win": 0.32571238403436026
+      },
+      "features": {
+        "home_elo_before": 1506.4493955594598,
+        "away_elo_before": 1537.796890313375,
+        "elo_difference": -31.347494753915043,
+        "home_form_5": 0.8,
+        "away_form_5": 1.2,
+        "home_goals_scored_5": 0.8,
+        "home_goals_conceded_5": 1.4,
+        "away_goals_scored_5": 1.0,
+        "away_goals_conceded_5": 1.4
+      },
+      "recorded_at": "2026-11-21T19:24:25.120392+00:00",
+      "kickoff_at": "2026-11-27T20:00:00+00:00",
+      "kickoff_time_known": true,
+      "home_goals": 3,
+      "away_goals": 2
+    },
     {
       "season": "2026_27",
       "date": "2026-11-23",

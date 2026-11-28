@@ -1658,9 +1658,12 @@
       "team1": "Nottingham Forest FC",
       "team2": "Chelsea FC",
       "score": {
-        "ft": null
+        "ft": [
+          3,
+          2
+        ]
       },
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "source_id": 560658
     },
     {
